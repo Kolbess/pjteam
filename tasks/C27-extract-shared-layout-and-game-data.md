@@ -2,7 +2,7 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Content | P1 | S | Todo |
+| Content | P1 | S | Done |
 
 **Depends on:** F03, F09, F14, F12, F18 (their header, footer, menu, image and contact markup is what gets extracted)
 **Blocked on:** —

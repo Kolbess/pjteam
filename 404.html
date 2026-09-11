@@ -26,14 +26,8 @@
     </style>
   </head>
   <body>
-    <header class="site-header">
-      <a class="wordmark" href="/pjteam/" aria-label="PJTeam home">
-        <img class="wordmark-logo" src="/logo-64.png" alt="" width="32" height="32" />
-        <span>PJTeam</span>
-      </a>
-      <a class="header-link" href="/pjteam/#games">Our games <span aria-hidden="true">↗</span></a>
-    </header>
-
+    <!-- The header and footer are rendered from src/layout.js (see src/not-found.js) so their
+         markup lives in exactly one place. They are inserted as siblings of <main> below. -->
     <main class="not-found section-shell" id="content">
       <div>
         <p class="eyebrow">Error 404 · Off the map</p>
@@ -50,8 +44,6 @@
       </div>
     </main>
 
-    <footer class="site-footer section-shell">
-      <div class="site-footer-inner"><span>PJTeam Studio</span><span>Made with curiosity.</span></div>
-    </footer>
+    <script type="module" src="/src/not-found.js"></script>
   </body>
 </html>

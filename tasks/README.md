@@ -56,7 +56,7 @@ Effort: XS < 30 min · S ≈ 1–2 h · M ≈ half day · L ≈ 1+ day.
 | C24 | [Add a "Work with us" page](C24-add-work-with-us-page.md) | Content | P3 | S | Blocked | F07, C01; C21 (soft) |
 | C25 | [Add a public roadmap to the game pages](C25-add-public-roadmap-to-game-pages.md) | Content | P3 | S | Blocked | C03, C04 |
 | C26 | [Add a fan-art wall](C26-add-fan-art-wall.md) | Content | P3 | S | Blocked | C06, C01; C17, C21 (soft) |
-| C27 | [Extract the shared layout and game data (C01 groundwork)](C27-extract-shared-layout-and-game-data.md) | Content | P1 | S | Todo | F03, F09, F14, F12, F18 |
+| C27 | [Extract the shared layout and game data (C01 groundwork)](C27-extract-shared-layout-and-game-data.md) | Content | P1 | S | Done | F03, F09, F14, F12, F18 |
 
 ## Suggested order
 

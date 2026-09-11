@@ -1,9 +1,6 @@
 import './style.css';
-
-const gamesUrl = `${import.meta.env.BASE_URL}games/`;
-// The Bearer card is object-fit: cover. Under 600px its 300px-tall box is filled by height (~534px wide).
-const bearerSizes = '(max-width: 600px) 534px, (max-width: 760px) 90vw, 480px';
-const bearerSrcset = (ext) => [640, 960, 1280, 1600].map((w) => `${gamesUrl}bearer-${w}.${ext} ${w}w`).join(', ');
+import { games } from './data/games.js';
+import { initNav, renderFooter, renderHeader } from './layout.js';
 
 // The studio has no working mailbox yet: the custom domain isn't bought (C02), so mail would bounce.
 // Set this to a working contact address and the Contact section shows the mailto link again.
@@ -12,22 +9,37 @@ const contactLink = CONTACT_EMAIL
   ? `<a class="contact-email" href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL} <span aria-hidden="true">↗</span></a>`
   : `<a class="contact-email" href="https://kolbes.itch.io/" target="_blank" rel="noopener">Find us on itch.io <span aria-hidden="true">↗</span></a>`;
 
+const renderCover = ({ sources = [], src, width, height, pixelArt, mark }) => {
+  const classes = ['game-cover', pixelArt && 'game-cover-pixel', mark && 'game-cover-mark'].filter(Boolean).join(' ');
+  const size = width ? ` width="${width}" height="${height}"` : '';
+  const img = `<img class="${classes}" src="${src}" alt=""${size} loading="lazy" />`;
+  if (!sources.length) return img;
+
+  const tags = sources
+    .map(({ type, srcset, sizes }) => `<source type="${type}" srcset="${srcset}"${sizes ? ` sizes="${sizes}"` : ''} />`)
+    .join('');
+  return `<picture>${tags}${img}</picture>`;
+};
+
+const renderCard = (game) => {
+  const cover = `${renderCover(game.cover)}<span>${game.number}</span>`;
+  // The cover repeats the demo link, so it is hidden from assistive tech and taken out of the tab order.
+  const image = game.demoUrl
+    ? `<a class="game-image game-image-link" href="${game.demoUrl}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">${cover}</a>`
+    : `<div class="game-image image-planning">${cover}</div>`;
+  const action = game.demoUrl
+    ? `<a class="demo-link" href="${game.demoUrl}" target="_blank" rel="noopener">Play demo on itch.io <span aria-hidden="true">↗</span></a>`
+    : `<p>${game.note}</p>`;
+  const status = `<span class="status${game.statusMuted ? ' status-muted' : ''}">${game.status}</span>`;
+
+  return `<article class="game-card${game.large ? ' game-card-large' : ''}">
+          ${image}
+          <div class="game-meta"><h3>${game.title}</h3>${action}${status}</div>
+        </article>`;
+};
+
 document.querySelector('#app').innerHTML = `
-  <a class="skip-link" href="#content">Skip to content</a>
-  <header class="site-header">
-    <a class="wordmark" href="#top" aria-label="PJTeam home">
-      <img class="wordmark-logo" src="${import.meta.env.BASE_URL}logo-64.png" alt="" width="32" height="32" />
-      <span>PJTeam</span>
-    </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
-      <a href="#games">Games</a>
-      <a href="#studio">Studio</a>
-      <a href="#team">Team</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="header-link" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
-  </header>
+  ${renderHeader({ home: true })}
 
   <main id="content" tabindex="-1">
     <section class="hero section-shell">
@@ -50,18 +62,7 @@ document.querySelector('#app').innerHTML = `
         <p>Stories, systems and small details that stay with you.</p>
       </div>
       <div class="game-grid">
-        <article class="game-card game-card-large">
-          <a class="game-image game-image-link" href="https://kolbes.itch.io/bearer" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><picture><source type="image/avif" srcset="${bearerSrcset('avif')}" sizes="${bearerSizes}" /><source type="image/webp" srcset="${bearerSrcset('webp')}" sizes="${bearerSizes}" /><img class="game-cover" src="${gamesUrl}bearer-1280.jpg" alt="" width="1280" height="720" loading="lazy" /></picture><span>01</span></a>
-          <div class="game-meta"><h3>Bearer</h3><a class="demo-link" href="https://kolbes.itch.io/bearer" target="_blank" rel="noopener">Play demo on itch.io <span aria-hidden="true">↗</span></a><span class="status">In development</span></div>
-        </article>
-        <article class="game-card">
-          <a class="game-image game-image-link" href="https://kolbes.itch.io/kindred-paws" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><picture><source type="image/webp" srcset="${gamesUrl}kindred-paws.webp" /><img class="game-cover game-cover-pixel" src="${gamesUrl}kindred-paws.png" alt="" width="315" height="250" loading="lazy" /></picture><span>02</span></a>
-          <div class="game-meta"><h3>Kindred Paws</h3><a class="demo-link" href="https://kolbes.itch.io/kindred-paws" target="_blank" rel="noopener">Play demo on itch.io <span aria-hidden="true">↗</span></a><span class="status">In development</span></div>
-        </article>
-        <article class="game-card">
-          <div class="game-image image-planning"><img class="game-cover game-cover-mark" src="${import.meta.env.BASE_URL}logo-mark.png" alt="" loading="lazy" /><span>03</span></div>
-          <div class="game-meta"><h3>Potion Stacker</h3><p>Details coming soon</p><span class="status status-muted">Planning phase</span></div>
-        </article>
+        ${games.map(renderCard).join('\n        ')}
       </div>
     </section>
 
@@ -93,23 +94,7 @@ document.querySelector('#app').innerHTML = `
     </section>
   </main>
 
-  <footer class="site-footer section-shell">
-    <div class="site-footer-inner"><span>PJTeam Studio, ${new Date().getFullYear()}</span><span>Made with curiosity.</span><span>Instagram&nbsp; · &nbsp;Bluesky</span></div>
-  </footer>
+  ${renderFooter()}
 `;
 
-const navToggle = document.querySelector('.nav-toggle');
-const siteNav = document.querySelector('#site-nav');
-const isNavOpen = () => navToggle.getAttribute('aria-expanded') === 'true';
-const setNavOpen = (open) => navToggle.setAttribute('aria-expanded', String(open));
-
-navToggle.addEventListener('click', () => setNavOpen(!isNavOpen()));
-siteNav.addEventListener('click', (event) => {
-  if (event.target.closest('a')) setNavOpen(false);
-});
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && isNavOpen()) {
-    setNavOpen(false);
-    navToggle.focus();
-  }
-});
+initNav();
