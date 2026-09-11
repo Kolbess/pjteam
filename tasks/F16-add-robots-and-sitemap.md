@@ -2,7 +2,7 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Fix | P3 | XS | Todo |
+| Fix | P3 | XS | Done |
 
 **Depends on:** F08 (use the same canonical URL)
 **Blocked on:** — (same custom-domain question as F08)

@@ -22,7 +22,7 @@ Effort: XS < 30 min · S ≈ 1–2 h · M ≈ half day · L ≈ 1+ day.
 | F13 | [Add a proper favicon set and a small header logo](F13-add-favicon-set-and-small-header-logo.md) | Fix | P3 | S | Todo | — |
 | F14 | [Add a usable mobile navigation](F14-add-mobile-navigation-menu.md) | Fix | P1 | M | Done | F09 |
 | F15 | [Add a branded 404 page that works under `/pjteam/`](F15-add-404-page.md) | Fix | P3 | S | Todo | — |
-| F16 | [Add sitemap.xml and robots.txt](F16-add-robots-and-sitemap.md) | Fix | P3 | XS | Todo | F08 |
+| F16 | [Add sitemap.xml and robots.txt](F16-add-robots-and-sitemap.md) | Fix | P3 | XS | Done | F08 |
 | F17 | [Self-host the Manrope and DM Mono fonts](F17-self-host-google-fonts.md) | Fix | P2 | S | Todo | — |
 
 ## Content
