@@ -81,11 +81,12 @@ h1 em { color: var(--blue-dark); font-style: normal; }
 .portrait-five { background: linear-gradient(155deg, #d6e9e4 24%, #9bbbd0 24%, #e7c186 70%, #75604d 70%); }
 .team-member h3 { font-size: 15px; letter-spacing: -.04em; margin: 17px 0 5px; }
 .team-member p { color: var(--muted); font-family: 'DM Mono', monospace; font-size: .75rem; margin: 0; text-transform: uppercase; }
-.contact { padding-bottom: 30px; padding-top: 125px; }
+.contact { padding-top: 125px; }
 .contact h2 { font-size: clamp(4rem, 11vw, 11rem); letter-spacing: -.12em; line-height: .8; margin: 0 0 52px; }
 .contact-email { border-bottom: 2px solid var(--ink); display: inline-flex; font-size: clamp(1.4rem, 3vw, 2.8rem); font-weight: 700; gap: 25px; letter-spacing: -.07em; padding-bottom: 9px; transition: border-color .2s ease, color .2s ease; }
 .contact-email:hover { border-color: var(--blue-dark); color: var(--blue-dark); }
-.contact-footer { border-top: 1px solid var(--line); color: var(--muted); display: flex; font-family: 'DM Mono', monospace; font-size: .75rem; justify-content: space-between; letter-spacing: .05em; margin-top: 150px; padding: 20px 0; text-transform: uppercase; }
+.site-footer { padding-bottom: 30px; }
+.site-footer-inner { border-top: 1px solid var(--line); color: var(--muted); display: flex; font-family: 'DM Mono', monospace; font-size: .75rem; justify-content: space-between; letter-spacing: .05em; margin-top: 150px; padding: 20px 0; text-transform: uppercase; }
 @media (max-width: 760px) {
   .site-header { flex-wrap: wrap; padding-top: 22px; }
   .nav-toggle { display: inline-flex; }
@@ -111,7 +112,7 @@ h1 em { color: var(--blue-dark); font-style: normal; }
   .team-portrait { height: 220px; }
   .contact { padding-top: 85px; }
   .contact-email { font-size: 1.35rem; gap: 12px; }
-  .contact-footer { flex-wrap: wrap; gap: 12px; margin-top: 95px; }
+  .site-footer-inner { flex-wrap: wrap; gap: 12px; margin-top: 95px; }
 }
 @media (max-width: 430px) {
   .team-grid { grid-template-columns: 1fr; }

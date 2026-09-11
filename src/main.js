@@ -78,9 +78,12 @@ document.querySelector('#app').innerHTML = `
       <p class="eyebrow">Have a good feeling?</p>
       <h2>Say hello<span class="blue-dot">.</span></h2>
       <a class="contact-email" href="mailto:hello@pjteam.games">hello@pjteam.games <span aria-hidden="true">↗</span></a>
-      <div class="contact-footer"><span>PJTeam Studio, 2025</span><span>Made with curiosity.</span><span>Instagram&nbsp; · &nbsp;Bluesky</span></div>
     </section>
   </main>
+
+  <footer class="site-footer section-shell">
+    <div class="site-footer-inner"><span>PJTeam Studio, ${new Date().getFullYear()}</span><span>Made with curiosity.</span><span>Instagram&nbsp; · &nbsp;Bluesky</span></div>
+  </footer>
 `;
 
 const navToggle = document.querySelector('.nav-toggle');
