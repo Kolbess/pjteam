@@ -1,6 +1,7 @@
 import './style.css';
 
 document.querySelector('#app').innerHTML = `
+  <a class="skip-link" href="#content">Skip to content</a>
   <header class="site-header">
     <a class="wordmark" href="#top" aria-label="PJTeam home">
       <img class="wordmark-logo" src="${import.meta.env.BASE_URL}logo.png" alt="" width="32" height="32" />
@@ -15,7 +16,7 @@ document.querySelector('#app').innerHTML = `
     <a class="header-link" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
   </header>
 
-  <main id="top">
+  <main id="content" tabindex="-1">
     <section class="hero section-shell">
       <div class="hero-copy">
         <p class="eyebrow">Independent game studio · Białystok / everywhere</p>

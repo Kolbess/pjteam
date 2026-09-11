@@ -15,7 +15,7 @@ Effort: XS < 30 min · S ≈ 1–2 h · M ≈ half day · L ≈ 1+ day.
 | F06 | [Replace the low-resolution Kindred Paws card image](F06-replace-low-res-kindred-paws-image.md) | Fix | P2 | S | Blocked | — |
 | F07 | [Resolve the "???" placeholder team members](F07-resolve-team-placeholder-members.md) | Fix | P2 | S | Blocked | — |
 | F08 | [Add Open Graph / Twitter tags, canonical, a descriptive title and a `<noscript>` fallback](F08-add-social-meta-canonical-and-noscript.md) | Fix | P1 | S | Todo | — |
-| F09 | [Add visible focus styles and a skip link](F09-add-focus-styles-and-skip-link.md) | Fix | P1 | S | Todo | — |
+| F09 | [Add visible focus styles and a skip link](F09-add-focus-styles-and-skip-link.md) | Fix | P1 | S | Done | — |
 | F10 | [Respect `prefers-reduced-motion`](F10-respect-prefers-reduced-motion.md) | Fix | P2 | XS | Done | — |
 | F11 | [Raise the minimum text size to 12 px](F11-raise-minimum-text-size.md) | Fix | P2 | S | Todo | — |
 | F12 | [Serve game and hero images as WebP/AVIF with `srcset`](F12-optimise-game-images.md) | Fix | P2 | M | Todo | F01, F05, F06 (soft) |
