@@ -2,7 +2,7 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Fix | P1 | M | Todo |
+| Fix | P1 | M | Done |
 
 **Depends on:** F09 (reuse its focus styles)
 **Blocked on:** —

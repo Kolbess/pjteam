@@ -7,7 +7,8 @@ document.querySelector('#app').innerHTML = `
       <img class="wordmark-logo" src="${import.meta.env.BASE_URL}logo.png" alt="" width="32" height="32" />
       <span>PJTeam</span>
     </a>
-    <nav class="site-nav" aria-label="Main navigation">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <a href="#games">Games</a>
       <a href="#studio">Studio</a>
       <a href="#team">Team</a>
@@ -81,3 +82,19 @@ document.querySelector('#app').innerHTML = `
     </section>
   </main>
 `;
+
+const navToggle = document.querySelector('.nav-toggle');
+const siteNav = document.querySelector('#site-nav');
+const isNavOpen = () => navToggle.getAttribute('aria-expanded') === 'true';
+const setNavOpen = (open) => navToggle.setAttribute('aria-expanded', String(open));
+
+navToggle.addEventListener('click', () => setNavOpen(!isNavOpen()));
+siteNav.addEventListener('click', (event) => {
+  if (event.target.closest('a')) setNavOpen(false);
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && isNavOpen()) {
+    setNavOpen(false);
+    navToggle.focus();
+  }
+});
