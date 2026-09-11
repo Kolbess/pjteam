@@ -17,7 +17,7 @@ Effort: XS < 30 min · S ≈ 1–2 h · M ≈ half day · L ≈ 1+ day.
 | F08 | [Add Open Graph / Twitter tags, canonical, a descriptive title and a `<noscript>` fallback](F08-add-social-meta-canonical-and-noscript.md) | Fix | P1 | S | Todo | — |
 | F09 | [Add visible focus styles and a skip link](F09-add-focus-styles-and-skip-link.md) | Fix | P1 | S | Done | — |
 | F10 | [Respect `prefers-reduced-motion`](F10-respect-prefers-reduced-motion.md) | Fix | P2 | XS | Done | — |
-| F11 | [Raise the minimum text size to 12 px](F11-raise-minimum-text-size.md) | Fix | P2 | S | Todo | — |
+| F11 | [Raise the minimum text size to 12 px](F11-raise-minimum-text-size.md) | Fix | P2 | S | Done | — |
 | F12 | [Serve game and hero images as WebP/AVIF with `srcset`](F12-optimise-game-images.md) | Fix | P2 | M | Todo | F01, F05, F06 (soft) |
 | F13 | [Add a proper favicon set and a small header logo](F13-add-favicon-set-and-small-header-logo.md) | Fix | P3 | S | Todo | — |
 | F14 | [Add a usable mobile navigation](F14-add-mobile-navigation-menu.md) | Fix | P1 | M | Done | F09 |
