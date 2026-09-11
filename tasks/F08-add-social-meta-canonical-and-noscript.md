@@ -2,7 +2,7 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Fix | P1 | S | Todo |
+| Fix | P1 | S | Done |
 
 **Depends on:** — (the share image can be refreshed after F01/F05 deliver real Bearer art)
 **Blocked on:** — (use `https://kolbess.github.io/pjteam/` in every absolute URL. `pjteam.games` is not bought yet; C02 switches the URLs only after the purchase)
