@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page not found · PJTeam</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#4767e5" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+    <!-- GitHub Pages serves this page at any depth (/pjteam/a/b/c): every URL must be root-absolute.
+         Asset URLs are rewritten to /pjteam/... by Vite at build time; link hrefs are hard-coded. -->
+    <link rel="stylesheet" href="/src/style.css" />
+    <style>
+      .not-found { align-items: center; display: grid; gap: 8vw; grid-template-columns: minmax(0, 1fr) minmax(0, .8fr); padding-bottom: 92px; padding-top: 58px; }
+      .not-found-actions { align-items: center; display: flex; flex-wrap: wrap; gap: 14px 32px; }
+      .not-found-actions .text-link { margin-top: 26px; }
+      .not-found-art { align-items: center; aspect-ratio: 1; background: var(--brand-gradient); box-shadow: 18px 18px 0 var(--ink); display: flex; justify-content: center; max-width: 100%; position: relative; }
+      .not-found-art img { height: auto; opacity: .9; width: 52%; }
+      .not-found + .site-footer .site-footer-inner { margin-top: 40px; }
+      @media (max-width: 760px) {
+        .not-found { gap: 50px; grid-template-columns: 1fr; padding-bottom: 60px; padding-top: 50px; }
+        .not-found-art { width: calc(100% - 18px); }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="/pjteam/" aria-label="PJTeam home">
+        <img class="wordmark-logo" src="/logo.png" alt="" width="32" height="32" />
+        <span>PJTeam</span>
+      </a>
+      <a class="header-link" href="/pjteam/#games">Our games <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main class="not-found section-shell" id="content">
+      <div>
+        <p class="eyebrow">Error 404 · Off the map</p>
+        <h1>Page not<br /><em>found.</em></h1>
+        <p class="hero-intro">This page wandered off, or never existed. The rest of the studio is right where we left it.</p>
+        <div class="not-found-actions">
+          <a class="button button-dark" href="/pjteam/">Back to PJTeam <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="/pjteam/#games">See our games <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="not-found-art" aria-hidden="true">
+        <img src="/logo-mark.png" alt="" width="400" height="400" />
+        <span class="art-coordinate">404 · ??°??' N</span>
+      </div>
+    </main>
+
+    <footer class="site-footer section-shell">
+      <div class="site-footer-inner"><span>PJTeam Studio</span><span>Made with curiosity.</span></div>
+    </footer>
+  </body>
+</html>
