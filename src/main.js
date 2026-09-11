@@ -4,7 +4,7 @@ document.querySelector('#app').innerHTML = `
   <a class="skip-link" href="#content">Skip to content</a>
   <header class="site-header">
     <a class="wordmark" href="#top" aria-label="PJTeam home">
-      <img class="wordmark-logo" src="${import.meta.env.BASE_URL}logo.png" alt="" width="32" height="32" />
+      <img class="wordmark-logo" src="${import.meta.env.BASE_URL}logo-64.png" alt="" width="32" height="32" />
       <span>PJTeam</span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>

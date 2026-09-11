@@ -2,7 +2,7 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Fix | P3 | S | Todo |
+| Fix | P3 | S | Done |
 
 **Depends on:** —
 **Blocked on:** — (optional: a vector/SVG version of the logo from the studio would allow an SVG favicon; without it, use PNG/ICO only)
