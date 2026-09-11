@@ -24,7 +24,7 @@ Effort: XS < 30 min · S ≈ 1–2 h · M ≈ half day · L ≈ 1+ day.
 | F15 | [Add a branded 404 page that works under `/pjteam/`](F15-add-404-page.md) | Fix | P3 | S | Done | — |
 | F16 | [Add sitemap.xml and robots.txt](F16-add-robots-and-sitemap.md) | Fix | P3 | XS | Done | F08 |
 | F17 | [Self-host the Manrope and DM Mono fonts](F17-self-host-google-fonts.md) | Fix | P2 | S | Done | — |
-| F18 | [Hide the unreachable contact email until pjteam.games exists](F18-hide-unreachable-contact-email.md) | Fix | P1 | XS | Todo | F03 |
+| F18 | [Hide the unreachable contact email until pjteam.games exists](F18-hide-unreachable-contact-email.md) | Fix | P1 | XS | Done | F03 |
 
 ## Content
 

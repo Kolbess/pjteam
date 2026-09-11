@@ -2,7 +2,7 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Fix | P1 | XS | Todo |
+| Fix | P1 | XS | Done |
 
 **Depends on:** F03 (footer markup it sits next to)
 **Blocked on:** —

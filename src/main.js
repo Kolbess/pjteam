@@ -5,6 +5,13 @@ const gamesUrl = `${import.meta.env.BASE_URL}games/`;
 const bearerSizes = '(max-width: 600px) 534px, (max-width: 760px) 90vw, 480px';
 const bearerSrcset = (ext) => [640, 960, 1280, 1600].map((w) => `${gamesUrl}bearer-${w}.${ext} ${w}w`).join(', ');
 
+// The studio has no working mailbox yet: the custom domain isn't bought (C02), so mail would bounce.
+// Set this to a working contact address and the Contact section shows the mailto link again.
+const CONTACT_EMAIL = null;
+const contactLink = CONTACT_EMAIL
+  ? `<a class="contact-email" href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL} <span aria-hidden="true">↗</span></a>`
+  : `<a class="contact-email" href="https://kolbes.itch.io/" target="_blank" rel="noopener">Find us on itch.io <span aria-hidden="true">↗</span></a>`;
+
 document.querySelector('#app').innerHTML = `
   <a class="skip-link" href="#content">Skip to content</a>
   <header class="site-header">
@@ -82,7 +89,7 @@ document.querySelector('#app').innerHTML = `
     <section class="contact section-shell" id="contact">
       <p class="eyebrow">Have a good feeling?</p>
       <h2>Say hello<span class="blue-dot">.</span></h2>
-      <a class="contact-email" href="mailto:hello@pjteam.games">hello@pjteam.games <span aria-hidden="true">↗</span></a>
+      ${contactLink}
     </section>
   </main>
 
