@@ -24,12 +24,13 @@ Effort: XS < 30 min · S ≈ 1–2 h · M ≈ half day · L ≈ 1+ day.
 | F15 | [Add a branded 404 page that works under `/pjteam/`](F15-add-404-page.md) | Fix | P3 | S | Done | — |
 | F16 | [Add sitemap.xml and robots.txt](F16-add-robots-and-sitemap.md) | Fix | P3 | XS | Done | F08 |
 | F17 | [Self-host the Manrope and DM Mono fonts](F17-self-host-google-fonts.md) | Fix | P2 | S | Done | — |
+| F18 | [Hide the unreachable contact email until pjteam.games exists](F18-hide-unreachable-contact-email.md) | Fix | P1 | XS | Todo | F03 |
 
 ## Content
 
 | ID | Title | Type | Priority | Effort | Status | Depends on |
 |---|---|---|---|---|---|---|
-| C01 | [Set up a multi-page structure and shared layout for game pages](C01-set-up-multi-page-structure-for-game-pages.md) | Content | P1 | M | Todo | F03, F09, F14 (soft) |
+| C01 | [Set up a multi-page structure and shared layout for game pages](C01-set-up-multi-page-structure-for-game-pages.md) | Content | P1 | M | Waiting on game copy | C27 (groundwork); C03/C04 copy |
 | C02 | [Move the site to the pjteam.games domain](C02-move-site-to-pjteam-games-domain.md) | Content | P1 | S | Blocked (domain not bought yet) | F08, F13, F15, F16 (soft) |
 | C03 | [Fill in the Bearer game page](C03-write-bearer-game-page.md) | Content | P1 | S | Blocked | C01 |
 | C04 | [Fill in the Kindred Paws game page](C04-write-kindred-paws-game-page.md) | Content | P1 | S | Blocked | C01, F06 (soft) |
@@ -55,6 +56,7 @@ Effort: XS < 30 min · S ≈ 1–2 h · M ≈ half day · L ≈ 1+ day.
 | C24 | [Add a "Work with us" page](C24-add-work-with-us-page.md) | Content | P3 | S | Blocked | F07, C01; C21 (soft) |
 | C25 | [Add a public roadmap to the game pages](C25-add-public-roadmap-to-game-pages.md) | Content | P3 | S | Blocked | C03, C04 |
 | C26 | [Add a fan-art wall](C26-add-fan-art-wall.md) | Content | P3 | S | Blocked | C06, C01; C17, C21 (soft) |
+| C27 | [Extract the shared layout and game data (C01 groundwork)](C27-extract-shared-layout-and-game-data.md) | Content | P1 | S | Todo | F03, F09, F14, F12, F18 |
 
 ## Suggested order
 
