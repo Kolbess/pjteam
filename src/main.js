@@ -37,15 +37,15 @@ document.querySelector('#app').innerHTML = `
       </div>
       <div class="game-grid">
         <article class="game-card game-card-large">
-          <div class="game-image image-meadow"><span>01</span></div>
-          <div class="game-meta"><h3>Bearer</h3><p>Details coming soon</p><span class="status">In development</span></div>
+          <a class="game-image game-image-link" href="https://kolbes.itch.io/bearer" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img class="game-cover" src="${import.meta.env.BASE_URL}games/bearer.png" alt="" loading="lazy" /><span>01</span></a>
+          <div class="game-meta"><h3>Bearer</h3><a class="demo-link" href="https://kolbes.itch.io/bearer" target="_blank" rel="noopener">Play demo on itch.io <span aria-hidden="true">↗</span></a><span class="status">In development</span></div>
         </article>
         <article class="game-card">
-          <div class="game-image image-night"><span>02</span></div>
-          <div class="game-meta"><h3>Kindred Paws</h3><p>Details coming soon</p><span class="status">In development</span></div>
+          <a class="game-image game-image-link" href="https://kolbes.itch.io/kindred-paws" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img class="game-cover game-cover-pixel" src="${import.meta.env.BASE_URL}games/kindred-paws.png" alt="" loading="lazy" /><span>02</span></a>
+          <div class="game-meta"><h3>Kindred Paws</h3><a class="demo-link" href="https://kolbes.itch.io/kindred-paws" target="_blank" rel="noopener">Play demo on itch.io <span aria-hidden="true">↗</span></a><span class="status">In development</span></div>
         </article>
         <article class="game-card">
-          <div class="game-image image-sky"><span>03</span></div>
+          <div class="game-image image-planning"><img class="game-cover game-cover-mark" src="${import.meta.env.BASE_URL}logo-mark.png" alt="" loading="lazy" /><span>03</span></div>
           <div class="game-meta"><h3>Potion Stacker</h3><p>Details coming soon</p><span class="status status-muted">Planning phase</span></div>
         </article>
       </div>
