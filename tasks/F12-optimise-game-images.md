@@ -2,7 +2,7 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Fix | P2 | M | Todo |
+| Fix | P2 | M | Done |
 
 **Depends on:** F01, F05, F06 (soft: can run now against the current files, then re-run for new art)
 **Blocked on:** —

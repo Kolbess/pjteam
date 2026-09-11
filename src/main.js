@@ -1,5 +1,10 @@
 import './style.css';
 
+const gamesUrl = `${import.meta.env.BASE_URL}games/`;
+// The Bearer card is object-fit: cover. Under 600px its 300px-tall box is filled by height (~534px wide).
+const bearerSizes = '(max-width: 600px) 534px, (max-width: 760px) 90vw, 480px';
+const bearerSrcset = (ext) => [640, 960, 1280, 1600].map((w) => `${gamesUrl}bearer-${w}.${ext} ${w}w`).join(', ');
+
 document.querySelector('#app').innerHTML = `
   <a class="skip-link" href="#content">Skip to content</a>
   <header class="site-header">
@@ -39,11 +44,11 @@ document.querySelector('#app').innerHTML = `
       </div>
       <div class="game-grid">
         <article class="game-card game-card-large">
-          <a class="game-image game-image-link" href="https://kolbes.itch.io/bearer" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img class="game-cover" src="${import.meta.env.BASE_URL}games/bearer.png" alt="" loading="lazy" /><span>01</span></a>
+          <a class="game-image game-image-link" href="https://kolbes.itch.io/bearer" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><picture><source type="image/avif" srcset="${bearerSrcset('avif')}" sizes="${bearerSizes}" /><source type="image/webp" srcset="${bearerSrcset('webp')}" sizes="${bearerSizes}" /><img class="game-cover" src="${gamesUrl}bearer-1280.jpg" alt="" width="1280" height="720" loading="lazy" /></picture><span>01</span></a>
           <div class="game-meta"><h3>Bearer</h3><a class="demo-link" href="https://kolbes.itch.io/bearer" target="_blank" rel="noopener">Play demo on itch.io <span aria-hidden="true">↗</span></a><span class="status">In development</span></div>
         </article>
         <article class="game-card">
-          <a class="game-image game-image-link" href="https://kolbes.itch.io/kindred-paws" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img class="game-cover game-cover-pixel" src="${import.meta.env.BASE_URL}games/kindred-paws.png" alt="" loading="lazy" /><span>02</span></a>
+          <a class="game-image game-image-link" href="https://kolbes.itch.io/kindred-paws" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><picture><source type="image/webp" srcset="${gamesUrl}kindred-paws.webp" /><img class="game-cover game-cover-pixel" src="${gamesUrl}kindred-paws.png" alt="" width="315" height="250" loading="lazy" /></picture><span>02</span></a>
           <div class="game-meta"><h3>Kindred Paws</h3><a class="demo-link" href="https://kolbes.itch.io/kindred-paws" target="_blank" rel="noopener">Play demo on itch.io <span aria-hidden="true">↗</span></a><span class="status">In development</span></div>
         </article>
         <article class="game-card">
