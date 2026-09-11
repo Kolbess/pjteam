@@ -3,7 +3,7 @@ import './style.css';
 document.querySelector('#app').innerHTML = `
   <header class="site-header">
     <a class="wordmark" href="#top" aria-label="PJTeam home">
-      <img class="wordmark-logo" src="/logo.png" alt="" width="32" height="32" />
+      <img class="wordmark-logo" src="${import.meta.env.BASE_URL}logo.png" alt="" width="32" height="32" />
       <span>PJTeam</span>
     </a>
     <nav class="site-nav" aria-label="Main navigation">
@@ -52,7 +52,7 @@ document.querySelector('#app').innerHTML = `
     </section>
 
     <section class="studio section-shell" id="studio">
-      <img class="studio-mark" src="/logo-mark.png" alt="" aria-hidden="true" />
+      <img class="studio-mark" src="${import.meta.env.BASE_URL}logo-mark.png" alt="" aria-hidden="true" />
       <div class="studio-statement"><p class="eyebrow">The studio</p><h2>Games with a pulse, made by people who care.</h2></div>
       <div class="studio-copy"><p>PJTeam is a small independent studio building characterful games with a point of view. We believe a game can be quiet and still leave a mark.</p><p>Our team brings together design, code, art and sound under one roof, with room for the unexpected.</p><a class="text-link" href="#contact">Meet the team <span aria-hidden="true">↗</span></a></div>
     </section>
