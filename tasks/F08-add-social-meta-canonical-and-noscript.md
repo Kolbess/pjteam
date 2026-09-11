@@ -29,7 +29,7 @@ Shared links show a branded 1200×630 preview with a clear title and description
 - [ ] View-source (not DevTools DOM) of the deployed page shows all og/twitter/canonical tags
 - [ ] `og:image` resolves to a 1200×630 image at its absolute URL (open it directly)
 - [ ] A preview checker (e.g. opengraph.xyz, or pasting the URL into Discord/Bluesky) shows image, title and description
-- [ ] With JavaScript disabled, the page shows the `<noscript>` content with working email and itch.io links
+- [ ] With JavaScript disabled, the page shows the `<noscript>` content with working itch.io links (no email until the studio confirms a working address)
 - [ ] `npm run build` succeeds, and `dist/index.html` contains the tags unchanged
 
 ## Out of scope
