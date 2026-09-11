@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import './fonts.css';
 
 /* Palette sampled from public/logo.png: sky blue #4793e5 -> royal blue #4767e5 */
 :root { --ink: #101b3f; --blue: #4793e5; --blue-dark: #4767e5; --brand-gradient: linear-gradient(135deg, var(--blue) 0%, var(--blue) 30%, var(--blue-dark) 100%); --paper: #f6f9ff; --line: #d8e3f8; --muted: #56648a; }

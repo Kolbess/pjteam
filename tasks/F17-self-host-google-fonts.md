@@ -2,7 +2,7 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Fix | P2 | S | Todo |
+| Fix | P2 | S | Done |
 
 **Depends on:** — (pairs with F01: together they remove every third-party request on page load)
 **Blocked on:** —
