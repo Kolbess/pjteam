@@ -54,7 +54,7 @@ document.querySelector('#app').innerHTML = `
     <section class="studio section-shell" id="studio">
       <img class="studio-mark" src="${import.meta.env.BASE_URL}logo-mark.png" alt="" aria-hidden="true" />
       <div class="studio-statement"><p class="eyebrow">The studio</p><h2>Games with a pulse, made by people who care.</h2></div>
-      <div class="studio-copy"><p>PJTeam is a small independent studio building characterful games with a point of view. We believe a game can be quiet and still leave a mark.</p><p>Our team brings together design, code, art and sound under one roof, with room for the unexpected.</p><a class="text-link" href="#contact">Meet the team <span aria-hidden="true">↗</span></a></div>
+      <div class="studio-copy"><p>PJTeam is a small independent studio building characterful games with a point of view. We believe a game can be quiet and still leave a mark.</p><p>Our team brings together design, code, art and sound under one roof, with room for the unexpected.</p><a class="text-link" href="#team">Meet the team <span aria-hidden="true">↗</span></a></div>
     </section>
 
     <section class="team section-shell" id="team">
