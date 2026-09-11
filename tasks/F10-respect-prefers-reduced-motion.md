@@ -2,7 +2,7 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Fix | P2 | XS | Todo |
+| Fix | P2 | XS | Done |
 
 **Depends on:** —
 **Blocked on:** —

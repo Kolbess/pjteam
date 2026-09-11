@@ -107,3 +107,8 @@ h1 em { color: var(--blue-dark); font-style: normal; }
   .team-grid { grid-template-columns: 1fr; }
   .team-portrait { height: 280px; }
 }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .button:hover { transform: none; }
+  .game-image-link:hover .game-cover { transform: none; }
+}
