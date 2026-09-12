@@ -5,10 +5,10 @@ Full task files, with acceptance criteria, live in [`tasks/`](tasks/README.md). 
 
 ## Next task
 
-**F07 — Resolve the "???" placeholder team members** ([task](tasks/F07-resolve-team-placeholder-members.md)) — *in progress*
-The team section says "Five curious minds." above two real people and three cards reading "???" (3D/2D Artist, Game Designer, Sound Artist). It's the most visibly unfinished thing left on the live site.
+**C06 — Build the media gallery for game pages** ([task](tasks/C06-build-game-media-gallery.md))
+The only remaining task that needs nothing from the studio. It builds the grid, the click-to-enlarge dialog and click-to-play clips (no autoplay under reduced motion, visible pause controls), so that C07/C08 media drops straight into the `[image 1]`–`[image 3]` and `[trailer]` slots now on the game pages. Effort M. It ships nothing visible until real media exists — so if you'd rather see visible progress, send the Bearer pitch and screenshots instead and C03 + C07 turn that page real.
 
-**Decided 2026-09-12: the studio is hiring.** The three slots become one "We're hiring" card listing the open roles, and the section gets retitled. Applications go to Instagram for now, because there's no working email until `pjteam.games` is bought (see C02). This also unblocks [C24](tasks/C24-add-work-with-us-page.md), a Work with us page, once role descriptions exist.
+**Just finished: F07** ([task](tasks/F07-resolve-team-placeholder-members.md)) — done on the branch, not yet pushed. The three "???" cards became one "We're hiring" card (3D/2D Artist, Game Designer, Sound Artist) linking to Instagram, and the section is now "Two curious minds (for now).". Applications go to Instagram because there's no working email until `pjteam.games` is bought (C02). Unblocks [C16](tasks/C16-add-team-photos-and-bios.md) (team photos) and [C24](tasks/C24-add-work-with-us-page.md) (Work with us), which need photos and role descriptions respectively.
 
 ## Ready now — needs nothing from the studio
 
