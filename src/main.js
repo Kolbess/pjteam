@@ -1,5 +1,5 @@
 import './style.css';
-import { games } from './data/games.js';
+import { games, getGame } from './data/games.js';
 import { initNav, renderFooter, renderHeader } from './layout.js';
 
 // The studio has no working mailbox yet: the custom domain isn't bought (C02), so mail would bounce.
@@ -9,10 +9,12 @@ const contactLink = CONTACT_EMAIL
   ? `<a class="contact-email" href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL} <span aria-hidden="true">↗</span></a>`
   : `<a class="contact-email" href="https://kolbes.itch.io/" target="_blank" rel="noopener">Find us on itch.io <span aria-hidden="true">↗</span></a>`;
 
-const renderCover = ({ sources = [], src, width, height, pixelArt, mark }) => {
-  const classes = ['game-cover', pixelArt && 'game-cover-pixel', mark && 'game-cover-mark'].filter(Boolean).join(' ');
+// `priority` is for the above-the-fold hero image: eager and high priority, never lazy.
+const renderCover = ({ sources = [], src, width, height, pixelArt, mark, alt = '' }, { className = 'game-cover', priority = false } = {}) => {
+  const classes = [className, pixelArt && 'game-cover-pixel', mark && 'game-cover-mark'].filter(Boolean).join(' ');
   const size = width ? ` width="${width}" height="${height}"` : '';
-  const img = `<img class="${classes}" src="${src}" alt=""${size} loading="lazy" />`;
+  const loading = priority ? ' fetchpriority="high" decoding="async"' : ' loading="lazy"';
+  const img = `<img class="${classes}" src="${src}" alt="${alt}"${size}${loading} />`;
   if (!sources.length) return img;
 
   const tags = sources
@@ -38,6 +40,9 @@ const renderCard = (game) => {
         </article>`;
 };
 
+// The hero shows the studio's own Bearer key art, self-hosted: no third-party stock photo.
+const heroArt = getGame('bearer').keyArt;
+
 document.querySelector('#app').innerHTML = `
   ${renderHeader({ home: true })}
 
@@ -49,7 +54,8 @@ document.querySelector('#app').innerHTML = `
         <p class="hero-intro">We make warm, strange and memorable games for people who like to wander a little further.</p>
         <a class="button button-dark" href="#games">See our games <span aria-hidden="true">↓</span></a>
       </div>
-      <div class="hero-art" role="img" aria-label="A colorful mountain landscape from an independent game">
+      <div class="hero-art">
+        ${renderCover(heroArt, { className: 'hero-image', priority: true })}
         <div class="art-label">Currently making<br /><strong>Something worth<br />getting lost in.</strong></div>
         <span class="art-coordinate">53°08' N · 23°10' E</span>
       </div>

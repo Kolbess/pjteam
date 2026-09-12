@@ -7,7 +7,7 @@ Effort: XS < 30 min · S ≈ 1–2 h · M ≈ half day · L ≈ 1+ day.
 
 | ID | Title | Type | Priority | Effort | Status | Depends on |
 |---|---|---|---|---|---|---|
-| F01 | [Replace the stock hero photo with real Bearer art](F01-replace-stock-hero-with-bearer-art.md) | Fix | P1 | S | Todo | — |
+| F01 | [Replace the stock hero photo with real Bearer art](F01-replace-stock-hero-with-bearer-art.md) | Fix | P1 | S | Done | — |
 | F02 | [Point "Meet the team" at the team section](F02-fix-meet-the-team-link.md) | Fix | P1 | XS | Done | — |
 | F03 | [Move the footer into a real `<footer>` and show the current year](F03-move-footer-into-footer-element-with-current-year.md) | Fix | P2 | S | Done | — |
 | F04 | [Link the Instagram and Bluesky profiles in the footer](F04-link-social-profiles-in-footer.md) | Fix | P2 | XS | Todo (Instagram only) | F03, C27 |

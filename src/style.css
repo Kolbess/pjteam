@@ -31,8 +31,14 @@ h1 em { color: var(--blue-dark); font-style: normal; }
 .button:hover { transform: translateY(-3px); }
 .button-dark { background: var(--ink); color: white; min-width: 170px; }
 .button-dark:hover { background: var(--blue-dark); }
-.hero-art { background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=85') center / cover; box-shadow: 18px 18px 0 var(--blue); min-height: 535px; overflow: hidden; padding: 34px; position: relative; }
-.hero-art::after { background: linear-gradient(135deg, rgba(71, 103, 229, .25), transparent 60%); content: ''; inset: 0; position: absolute; }
+.hero-art { background: var(--ink); box-shadow: 18px 18px 0 var(--blue); min-height: 535px; overflow: hidden; padding: 34px; position: relative; }
+.hero-art picture { inset: 0; position: absolute; }
+/* The art is a wide 16:9 frame in a near-square box, so it is cropped by width: the bear sits
+   at ~40% across and on the bottom edge, and this keeps it inside the crop at every width. */
+.hero-image { height: 100%; inset: 0; object-fit: cover; object-position: 42% 100%; position: absolute; width: 100%; }
+/* Brand tint top-left, plus an ink scrim bottom-right so .art-coordinate stays legible
+   over the bright ledge in the art. */
+.hero-art::after { background: linear-gradient(135deg, rgba(71, 103, 229, .22), transparent 55%), linear-gradient(315deg, rgba(16, 27, 63, .6), transparent 38%); content: ''; inset: 0; position: absolute; }
 .art-label { background: var(--paper); font-size: 12px; line-height: 1.4; padding: 15px 18px; position: relative; width: max-content; z-index: 1; }
 .art-label strong { display: block; font-size: 18px; letter-spacing: -.05em; line-height: 1.08; margin-top: 8px; }
 .art-coordinate { bottom: 24px; color: white; font-family: 'DM Mono', monospace; font-size: .75rem; letter-spacing: .12em; position: absolute; right: 24px; z-index: 1; }

@@ -2,9 +2,17 @@
 // Copy for the game pages (pitch, features, genre, platforms, engine) arrives with C03/C04.
 const gamesUrl = `${import.meta.env.BASE_URL}games/`;
 
+// Bearer raster variants are generated from art-src/BearerNoText.png (1672x940, not served,
+// not built). Regenerate them from that file rather than from anything inside public/.
+const bearerWidths = [640, 960, 1280, 1600];
+
 // The Bearer card is object-fit: cover. Under 600px its 300px-tall box is filled by height (~534px wide).
 const bearerSizes = '(max-width: 600px) 534px, (max-width: 760px) 90vw, 480px';
-const bearerSrcset = (ext) => [640, 960, 1280, 1600].map((w) => `${gamesUrl}bearer-${w}.${ext} ${w}w`).join(', ');
+const bearerSrcset = (ext) => bearerWidths.map((w) => `${gamesUrl}bearer-${w}.${ext} ${w}w`).join(', ');
+
+// The hero box is ~700 CSS px wide at most on desktop and ~90vw below 760px.
+const heroSizes = '(max-width: 760px) 90vw, (max-width: 1440px) 47vw, 700px';
+const heroSrcset = (ext) => bearerWidths.map((w) => `${gamesUrl}bearer-hero-${w}.${ext} ${w}w`).join(', ');
 
 // `cover` carries what the F12 <picture> markup needs: optional AVIF/WebP sources, the
 // fallback <img>, its intrinsic size, and whether it is pixel art or the studio mark.
@@ -24,6 +32,18 @@ export const games = [
       src: `${gamesUrl}bearer-1280.jpg`,
       width: 1280,
       height: 720,
+    },
+    // Above-the-fold hero art on the home page (F01). Same source as the cover, its own
+    // widths and `sizes` because the hero box is a different shape.
+    keyArt: {
+      sources: [
+        { type: 'image/avif', srcset: heroSrcset('avif'), sizes: heroSizes },
+        { type: 'image/webp', srcset: heroSrcset('webp'), sizes: heroSizes },
+      ],
+      src: `${gamesUrl}bearer-hero-1280.jpg`,
+      width: 1280,
+      height: 720,
+      alt: 'Bearer: a small teddy bear sits on a ledge, looking out over a ruined, fog-filled city street.',
     },
   },
   {
@@ -52,3 +72,5 @@ export const games = [
     cover: { src: `${import.meta.env.BASE_URL}logo-mark.png`, mark: true },
   },
 ];
+
+export const getGame = (slug) => games.find((game) => game.slug === slug);

@@ -2,7 +2,7 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Fix | P1 | S | Todo |
+| Fix | P1 | S | Done |
 
 **Depends on:** — (shares the asset with F05; optimise the new image as part of this task, following F12's approach)
 **Blocked on:** — **The studio supplied `public/games/BearerNoText.png` (1672×940, 1.6 MB, no text) on 2026-09-12.** It shows a teddy bear on a ledge looking out over a ruined, foggy low-poly city; the bear sits bottom-centre, so tune `object-position` to keep it visible in the near-square hero crop. The 1.6 MB PNG must not ship as-is: generate AVIF/WebP variants like F12 did for the card, and keep the raw PNG out of `dist/`.
@@ -24,11 +24,17 @@ The hero shows real, self-hosted Bearer art with honest alt text, and the page n
 - Optionally change the label at `src/main.js:27` to name the game (e.g. "Currently making / **Bearer**"). Confirm the wording with the studio.
 
 ## Acceptance criteria
-- [ ] No request to `images.unsplash.com` in the DevTools Network tab; `grep -r unsplash src index.html` returns nothing
-- [ ] Hero shows the Bearer art at desktop (1440 px) and mobile (~400 px) widths, subject not cropped out, no text or overlay collisions with `.art-label` / `.art-coordinate`
-- [ ] The hero image has meaningful `alt`; no `role="img"` / `aria-label` claiming unrelated content remains
-- [ ] Image loads correctly on the deployed `/pjteam/` base path (not just on `localhost:5173/`)
-- [ ] `npm run build` succeeds
+- [x] No request to `images.unsplash.com` in the DevTools Network tab; `grep -r unsplash src index.html` returns nothing
+- [x] Hero shows the Bearer art at desktop (1440 px) and mobile (~400 px) widths, subject not cropped out, no text or overlay collisions with `.art-label` / `.art-coordinate`
+- [x] The hero image has meaningful `alt`; no `role="img"` / `aria-label` claiming unrelated content remains
+- [x] Image loads correctly on the deployed `/pjteam/` base path (not just on `localhost:5173/`)
+- [x] `npm run build` succeeds
+
+## Result
+The source PNG now lives in `art-src/BearerNoText.png` (outside `public/`, so it is never served or
+copied into `dist/`). The shipped hero variants `public/games/bearer-hero-{640,960,1280,1600}.{avif,webp}`
+plus a `bearer-hero-1280.jpg` fallback were generated from it: 4.7–24.4 KB each, 140 KB for the whole
+set, against 1.6 MB for the raw PNG. `object-position: 42% 100%` keeps the bear inside the crop.
 
 ## Out of scope
 - Image format/size optimisation and `srcset` (F12)
