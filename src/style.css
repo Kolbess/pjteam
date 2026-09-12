@@ -77,9 +77,10 @@ h1 em { color: var(--blue-dark); font-style: normal; }
 .studio .text-link { border-color: white; }
 .studio .text-link:hover { border-color: var(--ink); color: var(--ink); }
 .team { border-top: 1px solid var(--line); padding-bottom: 120px; padding-top: 108px; }
-/* Three cards (two people + the hiring card, F07): a fixed 3-column track capped at 760px keeps the
-   portraits roughly square, as they were at five across, and leaves no empty columns. */
-.team-grid { display: grid; gap: 20px; grid-template-columns: repeat(3, 1fr); max-width: 760px; }
+/* Three cards (two people + the hiring card, F07) span the full content width, as the five-card row
+   did, so the section doesn't trail off into empty space. The portraits read wide until C16's photos
+   replace them. */
+.team-grid { display: grid; gap: 20px; grid-template-columns: repeat(3, 1fr); }
 .team-portrait { align-items: end; display: flex; height: 240px; justify-content: flex-end; overflow: hidden; padding: 14px; position: relative; }
 .team-portrait::before { border: 1px solid rgba(255,255,255,.7); content: ''; inset: 10px; position: absolute; }
 .team-portrait span { color: white; font-family: 'DM Mono', monospace; font-size: .75rem; position: relative; z-index: 1; }
