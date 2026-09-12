@@ -4,8 +4,13 @@
 |---|---|---|---|
 | Content | P1 | M | Todo |
 
-**Depends on:** F03, F09, F14 (soft: land them first so the header, footer, skip link and mobile menu are extracted once, in their final form)
-**Blocked on:** — (the studio confirms the URL scheme below; the domain question is C02)
+**Depends on:** C27 (the shared layout and `src/data/games.js` it builds on)
+**Blocked on:** —
+
+## Studio decision (2026-09-12)
+The studio asked for the pages to be built now with **visible placeholder slots** instead of waiting for final assets and copy: labelled boxes reading `[image 1]`, `[image 2]`, `[trailer]` where media will go, and clearly marked placeholder text for the pitch, features and facts. This overrides the "any empty field renders nothing, never TBD" rule below, but only for these marked slots: no invented facts, no fake screenshots, and nothing that reads as real content. C03/C04 replace the placeholders with real copy; C07/C08/C09 replace the media slots.
+
+**These pages are not fit to publish while they show placeholders** — keep them on the branch and let the studio decide when to deploy.
 
 ## Problem
 - The whole site is one page. `index.html:13-14` loads `src/main.js`, which writes everything into `#app` from a single template string (`src/main.js:3-82`). There is nowhere to put per-game content.

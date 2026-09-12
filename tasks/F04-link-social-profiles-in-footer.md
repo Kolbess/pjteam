@@ -2,10 +2,10 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Fix | P2 | XS | Blocked |
+| Fix | P2 | XS | Todo |
 
-**Depends on:** F03 (same markup, move footer first)
-**Blocked on:** The studio's real Instagram and Bluesky profile URLs, and confirmation that both accounts exist and should be public.
+**Depends on:** F03 (same markup, move footer first), F18/C27 (the footer is rendered by `renderFooter()` in `src/layout.js`)
+**Blocked on:** — **Instagram supplied on 2026-09-12: `https://www.instagram.com/pjteam.official`. No Bluesky URL was given, so remove the "Bluesky" label** (this task's own rule: no dead labels). Add it back when the studio sends the handle.
 
 ## Problem
 The footer shows "Instagram&nbsp; · &nbsp;Bluesky" as plain text in a `<span>` (`src/main.js:79`). It looks like a link but can't be clicked, focused or used by screen readers.

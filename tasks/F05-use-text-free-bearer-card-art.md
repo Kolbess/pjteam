@@ -2,10 +2,10 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Fix | P1 | XS | Blocked |
+| Fix | P1 | XS | Todo |
 
-**Depends on:** —
-**Blocked on:** A text-free Bearer image from the studio: key art or a 1080p+ gameplay screenshot with no "COMING SOON..." banner. The Bearer logo may stay or go (the card already shows the title as `<h3>`). The same export can serve F01.
+**Depends on:** F01 (same source image and generated variants; do F01 first and reuse them)
+**Blocked on:** — **The studio supplied `public/games/BearerNoText.png` (1672×940, no text) on 2026-09-12.** The current card variants (`bearer-*.avif/webp/jpg`) were generated from the old "COMING SOON" art and must be regenerated from this source.
 
 ## Problem
 - `public/games/bearer.png` (1919×1079, 1.4 MB) has the Bearer wordmark and a yellow "COMING SOON..." banner baked into the bottom strip of the image.
