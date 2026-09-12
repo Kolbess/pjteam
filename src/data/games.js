@@ -1,6 +1,6 @@
 // The studio's games. Titles, status, itch.io URLs and game-page copy live here only.
-// Page copy is `pitch`, `about` (paragraphs), `features` ([title, text] pairs) and `facts`;
-// a game without a `pitch` still renders the C01 placeholder page.
+// Page copy is `pitch`, `about` (paragraphs), `features` ([title, text] pairs) and `facts`.
+// A game with `page: true` needs at least a `pitch`; any other field it lacks doesn't render.
 const gamesUrl = `${import.meta.env.BASE_URL}games/`;
 
 // Bearer raster variants are generated from art-src/BearerNoText.png (1672x940, not served,
@@ -22,8 +22,8 @@ const heroSrcset = (ext) => bearerWidths.map((w) => `${gamesUrl}bearer-hero-${w}
 // public/games/<slug>/:
 //   { type: 'image', src, sources?, full?, alt, width, height }
 //   { type: 'video', src, webm?, poster, alt, width, height }
-// No game has one yet - C07/C08 deliver the screenshots and clips - so the game pages keep
-// their placeholder media slots and nothing invented ships.
+// No game has one yet - C07/C08 deliver the screenshots and clips - so the game pages leave
+// out their Media section.
 export const games = [
   {
     slug: 'bearer',
@@ -73,9 +73,31 @@ export const games = [
     slug: 'kindred-paws',
     number: '02',
     title: 'Kindred Paws',
-    status: 'In development',
+    status: 'Released',
     demoUrl: 'https://kolbes.itch.io/kindred-paws',
+    // Runs in the browser on itch.io, with a Windows download alongside.
+    playLabel: 'Play on itch.io',
     page: true,
+    // Copy from the studio's own itch.io page (C04). Its feature list is written as fragments
+    // there; the sentences below keep its wording.
+    pitch: 'A short 2D puzzle-platformer built for a game jam.',
+    about: [
+      'Kindred Paws follows an unlikely duo — a nimble fox and a graceful owl — escaping a forest engulfed by wildfire.',
+      'Switch between the two animals to combine their unique abilities and solve environmental puzzles.',
+    ],
+    features: [
+      ['Dual characters', 'Instantly switch between the fox and the owl.'],
+      ['Unique abilities', 'The fox has a quick dash and crawls through tight spaces; the owl glides across gaps and jumps higher.'],
+      ['Puzzles', 'Break walls and cross falling bridges.'],
+      ['Atmospheric world', 'A pixel-art forest with dynamic fire and embers.'],
+      ['Short and focused', 'Around 10–30 minutes of playtime, perfect for a jam.'],
+    ],
+    facts: {
+      genre: '2D puzzle-platformer',
+      platforms: 'Web browser, Windows',
+      engine: 'Unity',
+      madeFor: 'Games for a Cause charity jam',
+    },
     cover: {
       sources: [{ type: 'image/webp', srcset: `${gamesUrl}kindred-paws.webp` }],
       src: `${gamesUrl}kindred-paws.png`,

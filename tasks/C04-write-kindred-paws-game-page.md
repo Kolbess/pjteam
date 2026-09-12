@@ -2,9 +2,10 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Content | P1 | S | Blocked |
+| Content | P1 | S | Done |
 
 **Depends on:** C01; F06 (soft: the share image and cover need the new Kindred Paws art)
+**Done 2026-09-13:** copy, genre, platforms, engine, jam and status ("Released") taken from the studio's itch.io page. The share image stays the studio card, and the header art stays the 315×250 menu shot, until F06 delivers art.
 **Blocked on:** Studio-approved Kindred Paws copy and facts:
 - A one-line pitch (≤ ~20 words)
 - 3–5 feature bullets

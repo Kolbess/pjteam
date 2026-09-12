@@ -4,8 +4,8 @@
 // It renders from the `media` array of a game in src/data/games.js:
 //   { type: 'image', src, sources?, full?, alt, width, height }
 //   { type: 'video', src, webm?, poster, alt, width, height }
-// Files live under public/games/<slug>/. A game with no `media` renders nothing here, so the
-// game page keeps its C01 placeholder slots until C07/C08 deliver the real screenshots and clips.
+// Files live under public/games/<slug>/. A game with no `media` renders nothing here, and the
+// game page leaves out its Media section until C07/C08 deliver the real screenshots and clips.
 import { renderCover } from './media.js';
 
 const renderImage = (item) => {
