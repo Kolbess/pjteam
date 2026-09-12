@@ -29,12 +29,12 @@ export const games = [
     slug: 'bearer',
     number: '01',
     title: 'Bearer',
-    status: 'Released',
+    status: 'In development',
     demoUrl: 'https://kolbes.itch.io/bearer',
-    playLabel: 'Download on itch.io',
     page: true,
     large: true,
-    // Copy from the studio's own itch.io page (C03).
+    // Copy from the studio's own itch.io page (C03). itch.io lists it as "Released", but that
+    // build is a demo: the game itself is still in development.
     pitch: 'A touching, wordless 3D isometric puzzle-adventure.',
     about: [
       'You play as a plush toy brought to life by a mysterious blue light. Set in a war-torn Eastern European city in the 1990s, you must follow the footsteps of your 10-year-old owner.',
@@ -73,10 +73,8 @@ export const games = [
     slug: 'kindred-paws',
     number: '02',
     title: 'Kindred Paws',
-    status: 'Released',
+    status: 'In development',
     demoUrl: 'https://kolbes.itch.io/kindred-paws',
-    // Runs in the browser on itch.io, with a Windows download alongside.
-    playLabel: 'Play on itch.io',
     page: true,
     // Copy from the studio's own itch.io page (C04). Its feature list is written as fragments
     // there; the sentences below keep its wording.

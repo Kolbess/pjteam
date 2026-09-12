@@ -25,7 +25,7 @@ const section = (id, title, body) => `<section class="game-section" aria-labelle
 const art = game.keyArt ?? game.cover;
 
 const playButton = game.demoUrl
-  ? `<a class="button button-dark" href="${game.demoUrl}" target="_blank" rel="noopener">${game.playLabel} <span aria-hidden="true">↗</span></a>`
+  ? `<a class="button button-dark" href="${game.demoUrl}" target="_blank" rel="noopener">Play demo on itch.io <span aria-hidden="true">↗</span></a>`
   : '';
 
 // C06's gallery renders as soon as a game has a `media` array (C07/C08 supply the files).

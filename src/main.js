@@ -34,7 +34,7 @@ const renderCard = (game) => {
     : `<div class="${imageClass}">${cover}</div>`;
   const title = pageUrl ? `<h3><a href="${pageUrl}">${game.title}</a></h3>` : `<h3>${game.title}</h3>`;
   const action = game.demoUrl
-    ? `<a class="demo-link" href="${game.demoUrl}" target="_blank" rel="noopener">${game.playLabel} <span aria-hidden="true">↗</span></a>`
+    ? `<a class="demo-link" href="${game.demoUrl}" target="_blank" rel="noopener">Play demo on itch.io <span aria-hidden="true">↗</span></a>`
     : `<p>${game.note}</p>`;
   const status = `<span class="status${game.statusMuted ? ' status-muted' : ''}">${game.status}</span>`;
 

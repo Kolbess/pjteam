@@ -59,5 +59,4 @@ Nothing. Every open task waits on material, a decision or something external —
 
 Known compromises, all deliberate:
 - The game pages have no Media section until C07/C08 deliver screenshots.
-- Both games are marked "Released", as on itch.io. The home section heading still reads "Worlds in progress".
 - `public/logo.png` (162 KB) still ships but no page uses it; C12 needs it for the press kit.
