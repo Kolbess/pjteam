@@ -1,6 +1,7 @@
 import './style.css';
-import { games, getGame } from './data/games.js';
+import { gamePageUrl, games, getGame } from './data/games.js';
 import { initNav, renderFooter, renderHeader } from './layout.js';
+import { renderCover } from './media.js';
 
 // The studio has no working mailbox yet: the custom domain isn't bought (C02), so mail would bounce.
 // Set this to a working contact address and the Contact section shows the mailto link again.
@@ -9,26 +10,16 @@ const contactLink = CONTACT_EMAIL
   ? `<a class="contact-email" href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL} <span aria-hidden="true">↗</span></a>`
   : `<a class="contact-email" href="https://kolbes.itch.io/" target="_blank" rel="noopener">Find us on itch.io <span aria-hidden="true">↗</span></a>`;
 
-// `priority` is for the above-the-fold hero image: eager and high priority, never lazy.
-const renderCover = ({ sources = [], src, width, height, pixelArt, mark, alt = '' }, { className = 'game-cover', priority = false } = {}) => {
-  const classes = [className, pixelArt && 'game-cover-pixel', mark && 'game-cover-mark'].filter(Boolean).join(' ');
-  const size = width ? ` width="${width}" height="${height}"` : '';
-  const loading = priority ? ' fetchpriority="high" decoding="async"' : ' loading="lazy"';
-  const img = `<img class="${classes}" src="${src}" alt="${alt}"${size}${loading} />`;
-  if (!sources.length) return img;
-
-  const tags = sources
-    .map(({ type, srcset, sizes }) => `<source type="${type}" srcset="${srcset}"${sizes ? ` sizes="${sizes}"` : ''} />`)
-    .join('');
-  return `<picture>${tags}${img}</picture>`;
-};
-
 const renderCard = (game) => {
   const cover = `${renderCover(game.cover)}<span>${game.number}</span>`;
-  // The cover repeats the demo link, so it is hidden from assistive tech and taken out of the tab order.
-  const image = game.demoUrl
-    ? `<a class="game-image game-image-link" href="${game.demoUrl}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">${cover}</a>`
-    : `<div class="game-image image-planning">${cover}</div>`;
+  const pageUrl = gamePageUrl(game);
+  const imageClass = `game-image${game.demoUrl ? '' : ' image-planning'}`;
+  // The cover repeats the title link, so it is hidden from assistive tech and taken out of the
+  // tab order: every destination on the card keeps exactly one focusable link.
+  const image = pageUrl
+    ? `<a class="${imageClass} game-image-link" href="${pageUrl}" tabindex="-1" aria-hidden="true">${cover}</a>`
+    : `<div class="${imageClass}">${cover}</div>`;
+  const title = pageUrl ? `<h3><a href="${pageUrl}">${game.title}</a></h3>` : `<h3>${game.title}</h3>`;
   const action = game.demoUrl
     ? `<a class="demo-link" href="${game.demoUrl}" target="_blank" rel="noopener">Play demo on itch.io <span aria-hidden="true">↗</span></a>`
     : `<p>${game.note}</p>`;
@@ -36,7 +27,7 @@ const renderCard = (game) => {
 
   return `<article class="game-card${game.large ? ' game-card-large' : ''}">
           ${image}
-          <div class="game-meta"><h3>${game.title}</h3>${action}${status}</div>
+          <div class="game-meta">${title}${action}${status}</div>
         </article>`;
 };
 

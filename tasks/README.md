@@ -30,7 +30,7 @@ Effort: XS < 30 min · S ≈ 1–2 h · M ≈ half day · L ≈ 1+ day.
 
 | ID | Title | Type | Priority | Effort | Status | Depends on |
 |---|---|---|---|---|---|---|
-| C01 | [Set up a multi-page structure and shared layout for game pages](C01-set-up-multi-page-structure-for-game-pages.md) | Content | P1 | M | Todo (placeholder slots, do not publish) | C27 |
+| C01 | [Set up a multi-page structure and shared layout for game pages](C01-set-up-multi-page-structure-for-game-pages.md) | Content | P1 | M | Done (placeholders — do not publish) | C27 |
 | C02 | [Move the site to the pjteam.games domain](C02-move-site-to-pjteam-games-domain.md) | Content | P1 | S | Blocked (domain not bought yet) | F08, F13, F15, F16 (soft) |
 | C03 | [Fill in the Bearer game page](C03-write-bearer-game-page.md) | Content | P1 | S | Blocked | C01 |
 | C04 | [Fill in the Kindred Paws game page](C04-write-kindred-paws-game-page.md) | Content | P1 | S | Blocked | C01, F06 (soft) |

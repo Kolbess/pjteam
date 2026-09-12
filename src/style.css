@@ -96,6 +96,31 @@ h1 em { color: var(--blue-dark); font-style: normal; }
 .site-footer-inner { border-top: 1px solid var(--line); color: var(--muted); display: flex; font-family: 'DM Mono', monospace; font-size: .75rem; justify-content: space-between; letter-spacing: .05em; margin-top: 150px; padding: 20px 0; text-transform: uppercase; }
 .footer-link { border-bottom: 1px solid transparent; padding-bottom: 2px; transition: border-color .2s ease, color .2s ease; }
 .footer-link:hover { border-bottom-color: currentColor; color: var(--ink); }
+/* Game pages (C01). The placeholder slots are deliberately visible: dashed outline, muted label
+   and the right aspect ratio, so an empty slot reads as "waiting on the studio", never as a
+   broken image. C06-C09 replace the media slots, C03/C04 the text ones. */
+.game-page { padding-bottom: 120px; padding-top: 20px; }
+.crumb { border-bottom: 1px solid currentColor; padding-bottom: 2px; transition: color .2s ease; }
+.crumb:hover { color: var(--ink); }
+.game-page h1 { font-size: clamp(3rem, 7vw, 5.6rem); letter-spacing: -.08em; line-height: .92; margin-bottom: 22px; }
+.game-pitch { color: var(--muted); font-size: 17px; line-height: 1.65; margin-bottom: 12px; max-width: 520px; }
+.game-page .status { display: block; margin-bottom: 6px; text-align: left; }
+.game-page-art { aspect-ratio: 16 / 9; background: var(--ink); margin-top: 44px; max-width: 760px; overflow: hidden; position: relative; }
+.game-page-art picture { inset: 0; position: absolute; }
+.game-page-art .game-cover-pixel { object-fit: contain; }
+.page-note { color: var(--muted); font-family: 'DM Mono', monospace; font-size: .75rem; letter-spacing: .05em; line-height: 1.7; margin: 14px 0 0; max-width: 760px; text-transform: uppercase; }
+.game-section { border-top: 1px solid var(--line); margin-top: 56px; padding-top: 40px; }
+.game-section h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); letter-spacing: -.05em; margin-bottom: 26px; }
+.slot-grid { display: grid; gap: 20px; grid-template-columns: repeat(3, 1fr); margin-bottom: 20px; max-width: 760px; }
+.slot { align-items: center; aspect-ratio: 16 / 9; border: 2px dashed var(--line); color: var(--muted); display: flex; font-family: 'DM Mono', monospace; font-size: .75rem; justify-content: center; letter-spacing: .05em; text-align: center; text-transform: uppercase; }
+.slot-trailer { max-width: 760px; }
+.game-features { color: var(--muted); line-height: 1.9; margin: 0; padding-left: 20px; }
+.game-facts { display: grid; gap: 18px 40px; grid-template-columns: repeat(2, minmax(0, 240px)); margin: 0; }
+.game-facts dt { color: var(--muted); font-family: 'DM Mono', monospace; font-size: .75rem; letter-spacing: .05em; text-transform: uppercase; }
+.game-facts dd { font-size: 15px; font-weight: 700; margin: 6px 0 0; }
+.placeholder { color: var(--muted); font-family: 'DM Mono', monospace; font-size: .8125rem; font-weight: 400; letter-spacing: .03em; }
+.game-meta h3 a { transition: color .2s ease; }
+.game-meta h3 a:hover { color: var(--blue-dark); }
 @media (max-width: 760px) {
   .site-header { flex-wrap: wrap; padding-top: 22px; }
   .nav-toggle { display: inline-flex; }
@@ -122,6 +147,10 @@ h1 em { color: var(--blue-dark); font-style: normal; }
   .contact { padding-top: 85px; }
   .contact-email { font-size: 1.35rem; gap: 12px; }
   .site-footer-inner { flex-wrap: wrap; gap: 12px; margin-top: 95px; }
+  .game-page { padding-bottom: 80px; }
+  .game-section { margin-top: 44px; padding-top: 32px; }
+  .slot-grid { grid-template-columns: 1fr; }
+  .game-facts { grid-template-columns: 1fr; }
 }
 @media (max-width: 430px) {
   .team-grid { grid-template-columns: 1fr; }

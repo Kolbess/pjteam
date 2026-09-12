@@ -10,9 +10,12 @@ export default defineConfig({
   build: {
     rollupOptions: {
       // 404.html is served by GitHub Pages for any unknown URL under the site.
+      // Each game page is its own input: games/<slug>/index.html becomes /pjteam/games/<slug>/.
       input: {
         main: resolve(root, 'index.html'),
         notFound: resolve(root, '404.html'),
+        bearer: resolve(root, 'games/bearer/index.html'),
+        kindredPaws: resolve(root, 'games/kindred-paws/index.html'),
       },
     },
   },

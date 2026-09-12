@@ -23,6 +23,7 @@ export const games = [
     title: 'Bearer',
     status: 'In development',
     demoUrl: 'https://kolbes.itch.io/bearer',
+    page: true,
     large: true,
     cover: {
       sources: [
@@ -52,6 +53,7 @@ export const games = [
     title: 'Kindred Paws',
     status: 'In development',
     demoUrl: 'https://kolbes.itch.io/kindred-paws',
+    page: true,
     cover: {
       sources: [{ type: 'image/webp', srcset: `${gamesUrl}kindred-paws.webp` }],
       src: `${gamesUrl}kindred-paws.png`,
@@ -68,9 +70,14 @@ export const games = [
     statusMuted: true,
     demoUrl: null,
     note: 'Details coming soon',
+    // No game page until the studio decides to announce it (C05), so the card stays unlinked.
+    page: false,
     // No art yet: the card shows the studio mark on the brand gradient.
     cover: { src: `${import.meta.env.BASE_URL}logo-mark.png`, mark: true },
   },
 ];
 
 export const getGame = (slug) => games.find((game) => game.slug === slug);
+
+// Game pages live at /pjteam/games/<slug>/ (C01). A game without a page has no link.
+export const gamePageUrl = (game) => (game.page ? `${gamesUrl}${game.slug}/` : null);

@@ -2,7 +2,7 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Content | P1 | M | Todo |
+| Content | P1 | M | Done (placeholders — do not publish) |
 
 **Depends on:** C27 (the shared layout and `src/data/games.js` it builds on)
 **Blocked on:** —
@@ -42,13 +42,32 @@ The build produces the home page plus one page per released-demo game at clean U
 - If F16 is done, add the new URLs to `public/sitemap.xml`.
 
 ## Acceptance criteria
-- [ ] `npm run build` outputs `dist/index.html`, `dist/games/bearer/index.html` and `dist/games/kindred-paws/index.html`
-- [ ] `npm run dev` and `npm run preview` serve `/pjteam/games/bearer/` with styles, fonts and images
-- [ ] From a game page, the wordmark and every nav link reach the right home section. The skip link and mobile menu work on both page types, by keyboard and at ~400 px.
-- [ ] Home cards link to the game pages; "Play demo" links are unchanged
-- [ ] View-source (not DevTools) of each game page shows its own title, description, canonical and og tags
-- [ ] Game titles, statuses and demo URLs are defined only in `src/data/games.js`
-- [ ] `npm run build` succeeds
+- [x] `npm run build` outputs `dist/index.html`, `dist/games/bearer/index.html` and `dist/games/kindred-paws/index.html`
+- [x] `npm run dev` and `npm run preview` serve `/pjteam/games/bearer/` with styles, fonts and images —
+      verified against `vite preview`; the dev server was not started in this session
+- [x] From a game page, the wordmark and every nav link reach the right home section. The skip link and mobile menu work on both page types, by keyboard and at ~400 px.
+- [x] Home cards link to the game pages; "Play demo" links are unchanged
+- [x] View-source (not DevTools) of each game page shows its own title, description, canonical and og tags
+- [x] Game titles, statuses and demo URLs are defined only in `src/data/games.js`
+- [x] `npm run build` succeeds
+
+## Result (placeholder pages — not fit to publish)
+`games/bearer/index.html` and `games/kindred-paws/index.html` are Vite build inputs rendered by
+`src/game.js` from `src/data/games.js`, picking their game from `<body data-game="...">`. Chrome comes
+from `src/layout.js`; the `<picture>` markup moved out of `src/main.js` into `src/media.js` so the home
+cards and the game pages build game art the same way. Home cards now link title and image to the game
+page, while "Play demo" still goes to itch.io.
+
+The studio has supplied no copy or media for these pages, so they show clearly marked placeholder slots
+— `[image 1]`–`[image 3]`, `[trailer]`, `[one-line pitch]`, `[feature 1]`–`[feature 3]`, `[genre]`,
+`[platforms]`, `[engine]` — alongside the real status and the real itch.io demo button. No fact, date,
+platform or line of copy was invented, and no stock or fake screenshots were used.
+
+While the placeholders are up:
+- Both pages carry `<meta name="robots" content="noindex">`. **C03/C04 must remove it.**
+- Neither URL was added to `public/sitemap.xml`, deliberately, even though F16 is done.
+  **C03/C04 add them** once the pages hold real content.
+- Potion Stacker gets no page (C05), so its card still has no link.
 
 ## Out of scope
 - Game copy (C03, C04), media (C06–C08), trailer (C09), itch widget (C10)
