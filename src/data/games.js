@@ -99,6 +99,20 @@ export const games = [
       engine: 'Unity',
       madeFor: 'Games for a Cause charity jam',
     },
+    // Public jam results (C19). Fixed once the jam closed, so they need no "as of" date.
+    jamResults: [
+      {
+        jam: 'Games for a Cause 2025',
+        url: 'https://itch.io/jam/games-for-a-cause-2025/rate/3937008',
+        entries: 19,
+        ratings: 9,
+        ranks: [
+          ['Overall', 4],
+          ['Compassion', 3],
+          ['Gameplay', 5],
+        ],
+      },
+    ],
     cover: {
       sources: [{ type: 'image/webp', srcset: `${gamesUrl}kindred-paws.webp` }],
       src: `${gamesUrl}kindred-paws.png`,

@@ -40,7 +40,7 @@ Nothing. Every open task waits on material, a decision or something external —
 | [F06](tasks/F06-replace-low-res-kindred-paws-image.md) | Kindred Paws key art or a 1080p gameplay screenshot — its art is still a 315×250 menu shot |
 | [C13](tasks/C13-add-bearer-press-kit.md) / [C14](tasks/C14-add-kindred-paws-press-kit.md) | Per-game press kits — needs C12 plus the media above |
 | [C16](tasks/C16-add-team-photos-and-bios.md) | Team photos (4:5, ≥800×1000) with consent, plus 1–2 sentence bios |
-| [C19](tasks/C19-add-traction-and-social-proof.md) | Download numbers, jam results, player quotes (with permission) |
+| [C19](tasks/C19-add-traction-and-social-proof.md) | Download numbers from itch.io analytics and player quotes (with permission). Kindred Paws' jam results are already on its page |
 | [C22](tasks/C22-add-polish-language-home-page.md) | Polish copy, approved by a native speaker |
 | [C24](tasks/C24-add-work-with-us-page.md) | Open roles and terms — needs the F07 decision |
 | [C26](tasks/C26-add-fan-art-wall.md) | Fan art, with permission |

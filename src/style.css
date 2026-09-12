@@ -144,6 +144,14 @@ h1 em { color: var(--blue-dark); font-style: normal; }
 .game-facts { display: grid; gap: 18px 40px; grid-template-columns: repeat(2, minmax(0, 240px)); margin: 0; }
 .game-facts dt { color: var(--muted); font-family: 'DM Mono', monospace; font-size: .75rem; letter-spacing: .05em; text-transform: uppercase; }
 .game-facts dd { font-size: 15px; font-weight: 700; margin: 6px 0 0; }
+.jam-result + .jam-result { margin-top: 36px; }
+.jam-ranks { display: flex; flex-wrap: wrap; gap: 16px 48px; list-style: none; margin: 0 0 18px; padding: 0; }
+.jam-ranks li { display: grid; gap: 6px; }
+.jam-rank { font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 800; letter-spacing: -.06em; line-height: 1; }
+.jam-criterion { color: var(--muted); font-family: 'DM Mono', monospace; font-size: .75rem; letter-spacing: .05em; text-transform: uppercase; }
+.jam-caption { color: var(--muted); font-size: 15px; line-height: 1.7; margin: 0; max-width: 640px; }
+.jam-caption a { border-bottom: 1px solid currentColor; color: var(--blue-dark); padding-bottom: 1px; transition: color .2s ease; }
+.jam-caption a:hover { color: var(--ink); }
 .game-meta h3 a { transition: color .2s ease; }
 .game-meta h3 a:hover { color: var(--blue-dark); }
 @media (max-width: 760px) {

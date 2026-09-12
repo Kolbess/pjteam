@@ -2,9 +2,10 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Content | P2 | S | Blocked |
+| Content | P2 | S | In progress |
 
 **Depends on:** C03, C04; C13, C14 (soft: press kit placement)
+**Progress 2026-09-13:** jam results are done. The Kindred Paws page has a Recognition section built from the public Games for a Cause 2025 results (#4 Overall, #3 Compassion, #5 Gameplay of 19 entries), stored as `jamResults` in `src/data/games.js`. Still blocked: demo stats (itch.io analytics, private), quotes with permission, and any awards.
 **Blocked on:** Figures and permissions from the studio:
 - **Demo stats:** downloads/plays/ratings per demo from the itch.io analytics, each with an "as of" month.
 - **Jam results:** jam name, year, placement/category, and a link to the results page.

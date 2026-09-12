@@ -48,7 +48,7 @@ Effort: XS < 30 min · S ≈ 1–2 h · M ≈ half day · L ≈ 1+ day.
 | C16 | [Replace the gradient portraits with team photos and short bios](C16-add-team-photos-and-bios.md) | Content | P1 | S | Blocked | F07; F11 (soft) |
 | C17 | [Link Discord, YouTube and other community channels](C17-link-discord-and-community-channels.md) | Content | P2 | S | Blocked | F04 |
 | C18 | [Publish a streamer and content-creator video policy](C18-publish-streamer-video-policy.md) | Content | P2 | XS | Blocked | C12; C03, C04 (soft) |
-| C19 | [Show traction: demo downloads, jam results and player quotes](C19-add-traction-and-social-proof.md) | Content | P2 | S | Blocked | C03, C04; C13, C14 (soft) |
+| C19 | [Show traction: demo downloads, jam results and player quotes](C19-add-traction-and-social-proof.md) | Content | P2 | S | In progress (jam results done) | C03, C04; C13, C14 (soft) |
 | C20 | [Add a markdown devlog built at build time](C20-add-markdown-devlog.md) | Content | P2 | L | Blocked | C01; F16, C02 (soft) |
 | C21 | [Add a privacy policy page](C21-add-privacy-policy-page.md) | Content | P1 | S | Blocked | C01, F03; F01, F17 (soft) |
 | C22 | [Add a Polish-language version of the home page](C22-add-polish-language-home-page.md) | Content | P3 | M | Blocked | C01, F17 |

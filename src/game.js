@@ -13,7 +13,15 @@ const slug = document.body.dataset.game;
 const game = getGame(slug);
 if (!game) throw new Error(`Unknown game slug: ${slug}`);
 
-const { about = [], features = [], facts = {} } = game;
+const { about = [], features = [], facts = {}, jamResults = [] } = game;
+
+// C19: jam placements, each linked to its public results page.
+const renderJam = ({ jam, url, entries, ratings, ranks }) => `<div class="jam-result">
+          <ul class="jam-ranks">
+            ${ranks.map(([criterion, rank]) => `<li><span class="jam-rank">#${rank}</span><span class="jam-criterion">${criterion}</span></li>`).join('\n            ')}
+          </ul>
+          <p class="jam-caption">Out of ${entries} entries in the <a href="${url}" target="_blank" rel="noopener">${jam} charity jam <span aria-hidden="true">↗</span></a>, ranked from ${ratings} player ratings.</p>
+        </div>`;
 
 const section = (id, title, body) => `<section class="game-section" aria-labelledby="${id}-heading">
         <h2 id="${id}-heading">${title}</h2>
@@ -66,6 +74,7 @@ const sections = [
           ${factList.map(([term, value]) => `<div><dt>${term}</dt><dd>${value}</dd></div>`).join('\n          ')}
         </dl>`,
   ),
+  jamResults.length && section('recognition', 'Recognition', jamResults.map(renderJam).join('\n        ')),
 ].filter(Boolean);
 
 document.querySelector('#app').innerHTML = `
