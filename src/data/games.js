@@ -16,6 +16,13 @@ const heroSrcset = (ext) => bearerWidths.map((w) => `${gamesUrl}bearer-hero-${w}
 
 // `cover` carries what the F12 <picture> markup needs: optional AVIF/WebP sources, the
 // fallback <img>, its intrinsic size, and whether it is pixel art or the studio mark.
+//
+// An optional `media` array drives the C06 gallery on the game page, with files under
+// public/games/<slug>/:
+//   { type: 'image', src, sources?, full?, alt, width, height }
+//   { type: 'video', src, webm?, poster, alt, width, height }
+// No game has one yet - C07/C08 deliver the screenshots and clips - so the game pages keep
+// their placeholder media slots and nothing invented ships.
 export const games = [
   {
     slug: 'bearer',

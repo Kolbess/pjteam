@@ -1,5 +1,6 @@
 import './style.css';
 import { getGame } from './data/games.js';
+import { initGallery, renderGallery } from './gallery.js';
 import { initNav, renderFooter, renderHeader } from './layout.js';
 import { renderCover } from './media.js';
 
@@ -27,6 +28,17 @@ const demoButton = game.demoUrl
   ? `<a class="button button-dark" href="${game.demoUrl}" target="_blank" rel="noopener">Play demo on itch.io <span aria-hidden="true">↗</span></a>`
   : '';
 
+// C06's gallery renders as soon as a game has a `media` array (C07/C08 supply the files).
+// Until then the section keeps the C01 placeholder slots, so nothing invented ships.
+const gallery = renderGallery(game.media);
+const mediaGrid =
+  gallery ||
+  `<div class="slot-grid">
+          ${slot('image 1')}
+          ${slot('image 2')}
+          ${slot('image 3')}
+        </div>`;
+
 const facts = [
   ['Genre', placeholder('genre')],
   ['Platforms', placeholder('platforms')],
@@ -51,11 +63,7 @@ document.querySelector('#app').innerHTML = `
 
       <section class="game-section" aria-labelledby="media-heading">
         <h2 id="media-heading">Media</h2>
-        <div class="slot-grid">
-          ${slot('image 1')}
-          ${slot('image 2')}
-          ${slot('image 3')}
-        </div>
+        ${mediaGrid}
         ${slot('trailer', ' slot-trailer')}
       </section>
 
@@ -81,3 +89,4 @@ document.querySelector('#app').innerHTML = `
 `;
 
 initNav();
+initGallery();
