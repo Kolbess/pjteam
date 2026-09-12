@@ -2,9 +2,10 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Content | P1 | S | Blocked |
+| Content | P1 | S | Done |
 
 **Depends on:** C01
+**Done 2026-09-13:** copy, genre, platform, engine and status ("Released") taken from the studio's itch.io page. The share image is still the 1280×720 key art, not a 1200×630 cut.
 **Blocked on:** Studio-approved Bearer copy and facts:
 - A one-line pitch (≤ ~20 words)
 - 3–5 feature bullets

@@ -140,7 +140,12 @@ h1 em { color: var(--blue-dark); font-style: normal; }
 .gallery-dialog-image { display: block; height: auto; max-height: 92vh; max-width: min(1280px, 92vw); width: auto; }
 .gallery-dialog-close { background: var(--paper); border: 0; color: var(--ink); cursor: pointer; font-family: 'DM Mono', monospace; font-size: .75rem; letter-spacing: .05em; min-height: 44px; padding: 0 18px; position: absolute; right: 0; text-transform: uppercase; top: 0; transition: background .2s ease, color .2s ease; }
 .gallery-dialog-close:hover { background: var(--ink); color: white; }
-.game-features { color: var(--muted); line-height: 1.9; margin: 0; padding-left: 20px; }
+.game-about { color: var(--muted); font-size: 16px; line-height: 1.75; max-width: 640px; }
+.game-about p { margin: 0 0 16px; }
+.game-about p:last-child { margin-bottom: 0; }
+.game-features { color: var(--muted); line-height: 1.9; margin: 0; max-width: 640px; padding-left: 20px; }
+.game-features li + li { margin-top: 10px; }
+.game-features strong { color: var(--ink); }
 .game-facts { display: grid; gap: 18px 40px; grid-template-columns: repeat(2, minmax(0, 240px)); margin: 0; }
 .game-facts dt { color: var(--muted); font-family: 'DM Mono', monospace; font-size: .75rem; letter-spacing: .05em; text-transform: uppercase; }
 .game-facts dd { font-size: 15px; font-weight: 700; margin: 6px 0 0; }
