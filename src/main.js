@@ -10,6 +10,19 @@ const contactLink = CONTACT_EMAIL
   ? `<a class="contact-email" href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL} <span aria-hidden="true">↗</span></a>`
   : `<a class="contact-email" href="https://kolbes.itch.io/" target="_blank" rel="noopener">Find us on itch.io <span aria-hidden="true">↗</span></a>`;
 
+// Three roles are open (3D/2D Artist, Game Designer, Sound Artist), so the team grid ends on one
+// "we're hiring" card instead of three "???" placeholders. The whole card is a single link, so each
+// card in the grid still has exactly one focusable element and the accessible name names the roles.
+// Instagram is the only inbox the studio can actually read today (same URL as the F04 footer link).
+// When CONTACT_EMAIL above is a working address, swap the href for
+// `mailto:${CONTACT_EMAIL}?subject=Join%20PJTeam` and the note for the address: a one-line change.
+const hiringCard = `<a class="team-member team-hiring" href="https://www.instagram.com/pjteam.official" target="_blank" rel="noopener">
+          <div class="team-portrait portrait-open"><span aria-hidden="true">+3</span></div>
+          <h3>We're hiring <span aria-hidden="true">↗</span></h3>
+          <p>3D/2D Artist, Game Designer, Sound Artist</p>
+          <p class="team-hiring-note">Message us on Instagram</p>
+        </a>`;
+
 const renderCard = (game) => {
   const cover = `${renderCover(game.cover)}<span>${game.number}</span>`;
   const pageUrl = gamePageUrl(game);
@@ -72,15 +85,13 @@ document.querySelector('#app').innerHTML = `
     <section class="team section-shell" id="team">
       <div class="section-heading">
         <p class="eyebrow">The people</p>
-        <h2>Five curious minds<span class="blue-dot">.</span></h2>
-        <p>A small crew with different obsessions and one shared desk playlist.</p>
+        <h2>Two curious minds (for now)<span class="blue-dot">.</span></h2>
+        <p>A small crew with different obsessions, one shared desk playlist and room for three more.</p>
       </div>
       <div class="team-grid">
         <article class="team-member"><div class="team-portrait portrait-one"><span>MR</span></div><h3>Mateusz Roszko</h3><p>CEO · Team Leader</p></article>
         <article class="team-member"><div class="team-portrait portrait-two"><span>PS</span></div><h3>Piotr Sowul</h3><p>Game Developer</p></article>
-        <article class="team-member"><div class="team-portrait portrait-three"><span>?</span></div><h3>???</h3><p>3D/2D Artist</p></article>
-        <article class="team-member"><div class="team-portrait portrait-four"><span>?</span></div><h3>???</h3><p>Game Designer</p></article>
-        <article class="team-member"><div class="team-portrait portrait-five"><span>?</span></div><h3>???</h3><p>Sound Artist</p></article>
+        ${hiringCard}
       </div>
     </section>
 

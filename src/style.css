@@ -77,17 +77,25 @@ h1 em { color: var(--blue-dark); font-style: normal; }
 .studio .text-link { border-color: white; }
 .studio .text-link:hover { border-color: var(--ink); color: var(--ink); }
 .team { border-top: 1px solid var(--line); padding-bottom: 120px; padding-top: 108px; }
-.team-grid { display: grid; gap: 20px; grid-template-columns: repeat(5, 1fr); }
+/* Three cards (two people + the hiring card, F07): a fixed 3-column track capped at 760px keeps the
+   portraits roughly square, as they were at five across, and leaves no empty columns. */
+.team-grid { display: grid; gap: 20px; grid-template-columns: repeat(3, 1fr); max-width: 760px; }
 .team-portrait { align-items: end; display: flex; height: 240px; justify-content: flex-end; overflow: hidden; padding: 14px; position: relative; }
 .team-portrait::before { border: 1px solid rgba(255,255,255,.7); content: ''; inset: 10px; position: absolute; }
 .team-portrait span { color: white; font-family: 'DM Mono', monospace; font-size: .75rem; position: relative; z-index: 1; }
 .portrait-one { background: linear-gradient(150deg, #83c8d6 10%, #e1f3ed 10%, #8cae8a 65%, #426b61 65%); }
 .portrait-two { background: linear-gradient(35deg, #edb66b 25%, #f4dfb8 25%, #9acbd0 70%, #467d91 70%); }
-.portrait-three { background: linear-gradient(145deg, #b2d6f0 30%, #f3e4c9 30%, #ce8d77 75%, #6a5262 75%); }
-.portrait-four { background: linear-gradient(30deg, #91c3ae 25%, #dbe6c3 25%, #d6a3b5 72%, #6c5575 72%); }
-.portrait-five { background: linear-gradient(155deg, #d6e9e4 24%, #9bbbd0 24%, #e7c186 70%, #75604d 70%); }
+/* The hiring card must not look like a person: brand gradient instead of a portrait gradient, and a
+   dashed inner border for the empty seat. */
+.portrait-open { background: var(--brand-gradient); }
+.portrait-open::before { border-style: dashed; }
 .team-member h3 { font-size: 15px; letter-spacing: -.04em; margin: 17px 0 5px; }
 .team-member p { color: var(--muted); font-family: 'DM Mono', monospace; font-size: .75rem; margin: 0; text-transform: uppercase; }
+/* The whole hiring card is one link, so it carries its own hover affordance; the focus ring comes
+   from the global :focus-visible rule (F09). */
+.team-hiring h3, .team-hiring .team-hiring-note { transition: color .2s ease; }
+.team-hiring .team-hiring-note { color: var(--blue-dark); margin-top: 8px; }
+.team-hiring:hover h3, .team-hiring:hover .team-hiring-note { color: var(--blue-dark); }
 .contact { padding-top: 125px; }
 .contact h2 { font-size: clamp(4rem, 11vw, 11rem); letter-spacing: -.12em; line-height: .8; margin: 0 0 52px; }
 .contact-email { border-bottom: 2px solid var(--ink); display: inline-flex; font-size: clamp(1.4rem, 3vw, 2.8rem); font-weight: 700; gap: 25px; letter-spacing: -.07em; padding-bottom: 9px; transition: border-color .2s ease, color .2s ease; }
@@ -143,6 +151,9 @@ h1 em { color: var(--blue-dark); font-style: normal; }
   .studio-copy { margin-top: 48px; }
   .team { padding-bottom: 80px; padding-top: 80px; }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
+  /* Two people fill row 1, so the hiring card takes the full second row instead of leaving an empty
+     cell next to it. In the single-column grid below, `1 / -1` is just the one column. */
+  .team-hiring { grid-column: 1 / -1; }
   .team-portrait { height: 220px; }
   .contact { padding-top: 85px; }
   .contact-email { font-size: 1.35rem; gap: 12px; }

@@ -2,7 +2,7 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Fix | P2 | S | Todo |
+| Fix | P2 | S | Done |
 
 **Depends on:** F18/C27 (the contact route and the shared layout it uses)
 **Blocked on:** —
@@ -27,11 +27,18 @@ The team section only shows real people, plus at most one clear "join us" card, 
 - Tone down "design, code, art and sound" at `src/main.js:57` if Option B is chosen. The studio confirms the copy.
 
 ## Acceptance criteria
-- [ ] No "???" or "?" placeholder remains in the rendered page
-- [ ] The heading's number (if any) matches the number of people shown
-- [ ] With Option A, the hiring card is a single focusable link with a descriptive name and works with the keyboard
-- [ ] The grid has no awkward gaps at 1440 px, 760 px and ~400 px
-- [ ] `npm run build` succeeds
+- [x] No "???" or "?" placeholder remains in the rendered page
+- [x] The heading's number (if any) matches the number of people shown
+- [x] With Option A, the hiring card is a single focusable link with a descriptive name and works with the keyboard
+- [x] The grid has no awkward gaps at 1440 px, 760 px and ~400 px
+- [x] `npm run build` succeeds
+
+## Outcome
+Option A. The three "???" cards are one hiring card: heading "Two curious minds (for now).", card
+"We're hiring ↗ / 3D/2D Artist, Game Designer, Sound Artist / Message us on Instagram", the whole
+card a single link to the F04 Instagram URL. `.team-grid` is `repeat(3, 1fr)` capped at 760px, and
+the hiring card spans the full second row at the 2-column breakpoint. Role descriptions and terms
+are still open (C24); the card becomes a `mailto:` one-liner when `CONTACT_EMAIL` (F18) is real.
 
 ## Out of scope
 - Real portraits/photos for the named members (future content task)
