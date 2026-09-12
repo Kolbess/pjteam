@@ -28,6 +28,15 @@ const playButton = game.demoUrl
   ? `<a class="button button-dark" href="${game.demoUrl}" target="_blank" rel="noopener">Play demo on itch.io <span aria-hidden="true">↗</span></a>`
   : '';
 
+// The official itch.io widget (C10), coloured with the tokens from src/style.css:4 (paper, ink,
+// blue-dark, line). It is 552px wide, so CSS hides it below 600px and the demo button above stays
+// the call to action there. `loading="lazy"` keeps the request to itch.io off the wire until the
+// widget is near the viewport; a hidden lazy iframe isn't fetched at all.
+const itchColors = 'bg_color=f6f9ff&fg_color=101b3f&link_color=4767e5&border_color=d8e3f8';
+const itchWidget = game.itchEmbedId
+  ? `<iframe class="itch-widget" src="https://itch.io/embed/${game.itchEmbedId}?${itchColors}" width="552" height="167" loading="lazy" title="${game.title} on itch.io"></iframe>`
+  : '';
+
 // C06's gallery renders as soon as a game has a `media` array (C07/C08 supply the files).
 const gallery = renderGallery(game.media);
 
@@ -69,6 +78,7 @@ document.querySelector('#app').innerHTML = `
       <p class="game-pitch">${game.pitch}</p>
       <p class="status">${game.status}</p>
       ${playButton}
+      ${itchWidget}
 
       <div class="game-page-art">${renderCover(art)}</div>
 

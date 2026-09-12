@@ -39,7 +39,7 @@ Effort: XS < 30 min · S ≈ 1–2 h · M ≈ half day · L ≈ 1+ day.
 | C07 | [Add Bearer screenshots and gameplay loops](C07-add-bearer-screenshots-and-loops.md) | Content | P1 | S | Blocked | C06, C03 |
 | C08 | [Add Kindred Paws screenshots and gameplay loops](C08-add-kindred-paws-screenshots-and-loops.md) | Content | P1 | S | Blocked | C06, C04 |
 | C09 | [Embed game trailers with a click-to-load YouTube facade](C09-embed-trailers-with-click-to-load-facade.md) | Content | P1 | S | Blocked | C01; C03, C04 (soft) |
-| C10 | [Add the itch.io widget to game pages](C10-add-itch-io-widget-to-game-pages.md) | Content | P1 | S | Blocked | C03, C04; C21 (soft) |
+| C10 | [Add the itch.io widget to game pages](C10-add-itch-io-widget-to-game-pages.md) | Content | P1 | S | Done (lazy-loaded, desktop only; list itch.io in C21) | C03, C04; C21 (soft) |
 | C11 | [Add Steam wishlist widgets](C11-add-steam-wishlist-widgets.md) | Content | P3 | XS | Blocked | C10; C21 (soft) |
 | C12 | [Add the studio press kit page](C12-add-studio-press-kit-page.md) | Content | P1 | M | Blocked | C01; C02, C16, C17 (soft) |
 | C13 | [Add the Bearer press kit](C13-add-bearer-press-kit.md) | Content | P1 | M | Blocked | C12, C07; C09, C19 (soft) |

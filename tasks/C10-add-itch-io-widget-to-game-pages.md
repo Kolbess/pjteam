@@ -2,9 +2,10 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Content | P1 | S | Blocked |
+| Content | P1 | S | Done |
 
 **Depends on:** C03, C04; C21 (soft: the policy must list itch.io)
+**Done 2026-09-13:** the game IDs (Bearer 4406413, Kindred Paws 3937008) come from the public itch.io pages. It uses the task's default for the third-party request: `loading="lazy"`, and hidden below 600px. The C21 privacy policy must list itch.io once it exists.
 **Blocked on:**
 - The numeric itch.io game IDs for Bearer and Kindred Paws. Only the page owner can copy them, from the embed/widget option in the itch.io dashboard (see https://itch.io/docs/creators/widget).
 - A studio decision on the third-party request (see below).

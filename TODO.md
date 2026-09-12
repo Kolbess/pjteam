@@ -50,7 +50,6 @@ Nothing. Every open task waits on material, a decision or something external —
 | Task | Blocked by |
 |---|---|
 | [C02](tasks/C02-move-site-to-pjteam-games-domain.md) | **`pjteam.games` isn't bought.** No DNS at all, so `hello@pjteam.games` can't receive mail — that's why the contact link points at itch.io (F18). Buying it also restores the email and moves the site off `kolbess.github.io/pjteam/` |
-| [C10](tasks/C10-add-itch-io-widget-to-game-pages.md) | itch.io numeric game IDs |
 | [C11](tasks/C11-add-steam-wishlist-widgets.md) | Steam app IDs, once store pages exist |
 
 ## Done and live

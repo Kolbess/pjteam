@@ -31,6 +31,8 @@ export const games = [
     title: 'Bearer',
     status: 'In development',
     demoUrl: 'https://kolbes.itch.io/bearer',
+    // Numeric itch.io game ID for the embed widget (C10).
+    itchEmbedId: '4406413',
     page: true,
     large: true,
     // Copy from the studio's own itch.io page (C03). itch.io lists it as "Released", but that
@@ -75,6 +77,7 @@ export const games = [
     title: 'Kindred Paws',
     status: 'In development',
     demoUrl: 'https://kolbes.itch.io/kindred-paws',
+    itchEmbedId: '3937008',
     page: true,
     // Copy from the studio's own itch.io page (C04). Its feature list is written as fragments
     // there; the sentences below keep its wording.
