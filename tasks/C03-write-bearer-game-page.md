@@ -5,7 +5,7 @@
 | Content | P1 | S | Done |
 
 **Depends on:** C01
-**Done 2026-09-13:** copy, genre, platform and engine taken from the studio's itch.io page. Status stays "In development": itch.io says "Released", but that build is only a demo. The share image is still the 1280×720 key art, not a 1200×630 cut.
+**Done 2026-09-13:** copy, genre, platform and engine taken from the studio's itch.io page. Status stays "In development": itch.io says "Released", but that build is only a demo. The 1200×630 share image (`public/games/bearer-share.jpg`) is cut from `art-src/BearerNoText.png`: full width, with the top of the sky trimmed so the bear on the bottom edge stays in frame.
 **Blocked on:** Studio-approved Bearer copy and facts:
 - A one-line pitch (≤ ~20 words)
 - 3–5 feature bullets

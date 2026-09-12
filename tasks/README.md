@@ -32,7 +32,7 @@ Effort: XS < 30 min · S ≈ 1–2 h · M ≈ half day · L ≈ 1+ day.
 |---|---|---|---|---|---|---|
 | C01 | [Set up a multi-page structure and shared layout for game pages](C01-set-up-multi-page-structure-for-game-pages.md) | Content | P1 | M | Done (placeholders — do not publish) | C27 |
 | C02 | [Move the site to the pjteam.games domain](C02-move-site-to-pjteam-games-domain.md) | Content | P1 | S | Blocked (domain not bought yet) | F08, F13, F15, F16 (soft) |
-| C03 | [Fill in the Bearer game page](C03-write-bearer-game-page.md) | Content | P1 | S | Done (copy from itch.io; no 1200×630 share image) | C01 |
+| C03 | [Fill in the Bearer game page](C03-write-bearer-game-page.md) | Content | P1 | S | Done (copy from itch.io) | C01 |
 | C04 | [Fill in the Kindred Paws game page](C04-write-kindred-paws-game-page.md) | Content | P1 | S | Done (copy from itch.io; share image waits on F06) | C01, F06 (soft) |
 | C05 | [Add the Potion Stacker game page](C05-add-potion-stacker-game-page.md) | Content | P3 | S | Blocked | C01, C15 (soft) |
 | C06 | [Build a lightweight media gallery for game pages](C06-build-game-media-gallery.md) | Content | P1 | M | Done (inactive until C07/C08 supply media) | C01, F10, F12 |
