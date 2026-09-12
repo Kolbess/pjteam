@@ -2,7 +2,7 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Fix | P1 | XS | Todo |
+| Fix | P1 | XS | Done |
 
 **Depends on:** F01 (same source image and generated variants; do F01 first and reuse them)
 **Blocked on:** — **The studio supplied `public/games/BearerNoText.png` (1672×940, no text) on 2026-09-12.** The current card variants (`bearer-*.avif/webp/jpg`) were generated from the old "COMING SOON" art and must be regenerated from this source.
@@ -21,10 +21,18 @@ The Bearer card shows clean game art that doesn't contradict the "Play demo" cal
 - Leave format conversion and `srcset` to F12.
 
 ## Acceptance criteria
-- [ ] No baked-in "COMING SOON" (or other marketing text) is visible on the Bearer card at any width
-- [ ] Subject reads clearly at 1440 px, 1024 px and ~400 px widths
-- [ ] Link targets at `src/main.js:40-41` are unchanged
-- [ ] `npm run build` succeeds
+- [x] No baked-in "COMING SOON" (or other marketing text) is visible on the Bearer card at any width
+- [x] Subject reads clearly at 1440 px, 1024 px and ~400 px widths
+- [x] Link targets at `src/main.js:40-41` are unchanged
+- [x] `npm run build` succeeds
+
+## Result
+The `bearer-*` variants were regenerated from `art-src/BearerNoText.png` (the F01 source) at the same
+names and widths, so the old "COMING SOON" exports are replaced rather than left behind as orphans:
+`bearer-{640,960,1280,1600}.{avif,webp}` plus the `bearer-1280.jpg` fallback, 4.7–42.4 KB each.
+Markup, `sizes`, the intrinsic 1280×720 and both link targets are unchanged. The card's default
+centred crop keeps the bear in frame from 1440 px down to 400 px, so no `object-position` modifier
+was needed.
 
 ## Out of scope
 - Hero image (F01)
