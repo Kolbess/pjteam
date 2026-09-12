@@ -44,17 +44,27 @@ ${NAV_LINKS.map(({ hash, label }) => `      <a href="${sectionHref(hash, home)}"
   </header>`;
 }
 
+// Only channels the studio has actually given us are listed: a name with no profile behind it
+// would be a dead label. Bluesky (and anything from C17) comes back by adding an entry here
+// as soon as the studio sends the handle; the ` · ` separator already handles more than one.
+const SOCIAL_LINKS = [{ label: 'Instagram', url: 'https://www.instagram.com/pjteam.official' }];
+
+const renderSocials = () =>
+  SOCIAL_LINKS.map(
+    ({ label, url }) => `<a class="footer-link" href="${url}" target="_blank" rel="noopener">${label}</a>`,
+  ).join('<span aria-hidden="true">&nbsp; · &nbsp;</span>');
+
 /**
  * @param {object} [options]
  * @param {boolean} [options.year]    show the current year next to the studio name
- * @param {boolean} [options.socials] show the social channels (linked in F04)
+ * @param {boolean} [options.socials] show the social channels
  */
 export function renderFooter({ year = true, socials = true } = {}) {
   const items = [
     `<span>PJTeam Studio${year ? `, ${new Date().getFullYear()}` : ''}</span>`,
     '<span>Made with curiosity.</span>',
   ];
-  if (socials) items.push('<span>Instagram&nbsp; · &nbsp;Bluesky</span>');
+  if (socials && SOCIAL_LINKS.length) items.push(`<span>${renderSocials()}</span>`);
 
   return `<footer class="site-footer section-shell">
     <div class="site-footer-inner">${items.join('')}</div>

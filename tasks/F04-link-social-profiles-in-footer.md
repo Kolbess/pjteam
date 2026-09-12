@@ -2,7 +2,7 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Fix | P2 | XS | Todo |
+| Fix | P2 | XS | Done (Instagram only) |
 
 **Depends on:** F03 (same markup, move footer first), F18/C27 (the footer is rendered by `renderFooter()` in `src/layout.js`)
 **Blocked on:** — **Instagram supplied on 2026-09-12: `https://www.instagram.com/pjteam.official`. No Bluesky URL was given, so remove the "Bluesky" label** (this task's own rule: no dead labels). Add it back when the studio sends the handle.
@@ -19,10 +19,18 @@ Each network name is a working link to the studio's profile. If a profile doesn'
 - If the URLs can't be supplied, remove the text rather than shipping dead labels. The studio decides.
 
 ## Acceptance criteria
-- [ ] Both names are links that open the correct profiles in a new tab
-- [ ] Both are reachable with Tab and show a visible focus indicator (see F09)
-- [ ] Footer still wraps cleanly at ~400 px
-- [ ] `npm run build` succeeds
+- [x] Both names are links that open the correct profiles in a new tab — only Instagram exists, so
+      only Instagram is rendered; the Bluesky label was removed rather than left dead
+- [x] Both are reachable with Tab and show a visible focus indicator (see F09)
+- [x] Footer still wraps cleanly at ~400 px
+- [x] `npm run build` succeeds
+
+## Result
+Instagram is a real link to `https://www.instagram.com/pjteam.official` (`target="_blank" rel="noopener"`),
+rendered by `renderFooter()` in `src/layout.js` and styled with `.footer-link`, so it inherits the
+F09 focus ring. "Bluesky" is gone from the markup. The `SOCIAL_LINKS` array in `src/layout.js` takes
+one entry per channel and already renders the ` · ` separator between them: Bluesky comes back by
+adding its handle there, which is also where C17's Discord and YouTube links belong.
 
 ## Out of scope
 - Adding other networks or icons

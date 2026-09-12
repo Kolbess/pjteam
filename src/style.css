@@ -94,6 +94,8 @@ h1 em { color: var(--blue-dark); font-style: normal; }
 .contact-email:hover { border-color: var(--blue-dark); color: var(--blue-dark); }
 .site-footer { padding-bottom: 30px; }
 .site-footer-inner { border-top: 1px solid var(--line); color: var(--muted); display: flex; font-family: 'DM Mono', monospace; font-size: .75rem; justify-content: space-between; letter-spacing: .05em; margin-top: 150px; padding: 20px 0; text-transform: uppercase; }
+.footer-link { border-bottom: 1px solid transparent; padding-bottom: 2px; transition: border-color .2s ease, color .2s ease; }
+.footer-link:hover { border-bottom-color: currentColor; color: var(--ink); }
 @media (max-width: 760px) {
   .site-header { flex-wrap: wrap; padding-top: 22px; }
   .nav-toggle { display: inline-flex; }
