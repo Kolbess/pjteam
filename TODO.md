@@ -5,16 +5,17 @@ Full task files, with acceptance criteria, live in [`tasks/`](tasks/README.md). 
 
 ## Next task
 
-**C06 — Build the media gallery for game pages** ([task](tasks/C06-build-game-media-gallery.md))
-The only remaining task that needs nothing from the studio. It builds the grid, the click-to-enlarge dialog and click-to-play clips (no autoplay under reduced motion, visible pause controls), so that C07/C08 media drops straight into the `[image 1]`–`[image 3]` and `[trailer]` slots now on the game pages. Effort M. It ships nothing visible until real media exists — so if you'd rather see visible progress, send the Bearer pitch and screenshots instead and C03 + C07 turn that page real.
+**Everything that could be done without the studio is done.** The next tasks all need material from you, in this order of value:
 
-**Just finished: F07** ([task](tasks/F07-resolve-team-placeholder-members.md)) — done on the branch, not yet pushed. The three "???" cards became one "We're hiring" card (3D/2D Artist, Game Designer, Sound Artist) linking to Instagram, and the section is now "Two curious minds (for now).". Applications go to Instagram because there's no working email until `pjteam.games` is bought (C02). Unblocks [C16](tasks/C16-add-team-photos-and-bios.md) (team photos) and [C24](tasks/C24-add-work-with-us-page.md) (Work with us), which need photos and role descriptions respectively.
+1. **[C03](tasks/C03-write-bearer-game-page.md) + [C07](tasks/C07-add-bearer-screenshots-and-loops.md) — make the Bearer page real.** Send a one-line pitch, 3–5 features, genre, platforms and engine, plus 4–6 screenshots (capture at 1920×1080) and, if you have them, 3–5 clips of 5–10 s. This replaces the `[image 1]` / `[one-line pitch]` placeholders that are live now, removes the page's `noindex` and adds it to the sitemap. The gallery ([C06](tasks/C06-build-game-media-gallery.md)) is already built and switches on the moment media lands.
+2. **[F06](tasks/F06-replace-low-res-kindred-paws-image.md) — Kindred Paws key art.** Its 315×250 menu screenshot is the weakest image on the site now that Bearer has real art.
+3. **[C04](tasks/C04-write-kindred-paws-game-page.md) + [C08](tasks/C08-add-kindred-paws-screenshots-and-loops.md)** — same as 1, for Kindred Paws.
+
+Cheap wins whenever you have a spare minute: a Bluesky handle or Discord invite ([C17](tasks/C17-link-discord-and-community-channels.md)), a yes to streamers recording and monetising your games ([C18](tasks/C18-publish-streamer-video-policy.md)), or buying `pjteam.games` ([C02](tasks/C02-move-site-to-pjteam-games-domain.md)), which also restores the contact email and the hiring card's inbox.
 
 ## Ready now — needs nothing from the studio
 
-| Task | What it is | Note |
-|---|---|---|
-| [C06](tasks/C06-build-game-media-gallery.md) | Media gallery for game pages (grid, lightbox, click-to-play clips) | Buildable and testable now, but shows nothing until C07/C08 media exists |
+Nothing. Every open task waits on material, a decision or something external — see the sections below.
 
 ## One answer from you unblocks it
 
