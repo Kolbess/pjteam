@@ -2,10 +2,15 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Fix | P2 | S | Blocked |
+| Fix | P2 | S | Todo |
 
-**Depends on:** —
-**Blocked on:** A studio decision: (a) are the 3D/2D Artist, Game Designer and Sound Artist roles actually open, and should the site advertise them? (b) If yes, what should applicants do (email address, subject line, a short line per role)? (c) Or should the empty slots just be removed?
+**Depends on:** F18/C27 (the contact route and the shared layout it uses)
+**Blocked on:** —
+
+## Studio decision (2026-09-12)
+**Option A: the studio is hiring.** Replace the three "???" cards with one "We're hiring" card listing the three open roles (3D/2D Artist, Game Designer, Sound Artist) and retitle the section.
+
+**How applicants get in touch:** there is no working email — `pjteam.games` isn't bought, which is why F18 replaced the contact link with itch.io. Point the hiring card at the studio's Instagram instead (`https://www.instagram.com/pjteam.official`, the same URL F04 uses), worded so it's clear that's where to send a message. Do **not** use `mailto:hello@pjteam.games`, and don't invent an address. When the studio supplies a working email, the card switches to `mailto:` with a subject line — keep that a one-line change, next to F18's `CONTACT_EMAIL` constant.
 
 ## Problem
 - The heading says "Five curious minds." (`src/main.js:63`), but only two people are named (`src/main.js:67-68`). The other three cards show "???" with a "?" portrait (`src/main.js:69-71`), which reads as unfinished.

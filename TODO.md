@@ -5,12 +5,10 @@ Full task files, with acceptance criteria, live in [`tasks/`](tasks/README.md). 
 
 ## Next task
 
-**F07 — Resolve the "???" placeholder team members** ([task](tasks/F07-resolve-team-placeholder-members.md))
-The team section says "Five curious minds." above two real people and three cards reading "???" (3D/2D Artist, Game Designer, Sound Artist). It's the most visibly unfinished thing left on the live site. It needs one decision from the studio, nothing else:
-- **Hiring** → the three slots become one "We're hiring" card listing the open roles, and the heading changes (e.g. "Two curious minds (for now)."). This also unblocks C24 (Work with us).
-- **Not hiring** → remove the three cards and retitle the section.
+**F07 — Resolve the "???" placeholder team members** ([task](tasks/F07-resolve-team-placeholder-members.md)) — *in progress*
+The team section says "Five curious minds." above two real people and three cards reading "???" (3D/2D Artist, Game Designer, Sound Artist). It's the most visibly unfinished thing left on the live site.
 
-Effort XS–S, visible immediately, no assets needed.
+**Decided 2026-09-12: the studio is hiring.** The three slots become one "We're hiring" card listing the open roles, and the section gets retitled. Applications go to Instagram for now, because there's no working email until `pjteam.games` is bought (see C02). This also unblocks [C24](tasks/C24-add-work-with-us-page.md), a Work with us page, once role descriptions exist.
 
 ## Ready now — needs nothing from the studio
 
@@ -22,7 +20,6 @@ Effort XS–S, visible immediately, no assets needed.
 
 | Task | What's needed |
 |---|---|
-| [F07](tasks/F07-resolve-team-placeholder-members.md) | Hiring, or remove the three "???" slots? |
 | [C17](tasks/C17-link-discord-and-community-channels.md) / [F04](tasks/F04-link-social-profiles-in-footer.md) | Bluesky handle, Discord invite (non-expiring), YouTube URL |
 | [C18](tasks/C18-publish-streamer-video-policy.md) | Confirm streamers may record and monetise your games; any limits (music cleared?) |
 | [C21](tasks/C21-add-privacy-policy-page.md) | Legal name + postal address of whoever runs PJTeam, and a contact email |
