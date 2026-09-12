@@ -1,15 +1,15 @@
 # PJTeam site — to-do
 
-Snapshot: 2026-09-12. Live at <https://kolbess.github.io/pjteam/> (branch `site-improvements` → `main`).
+Snapshot: 2026-09-13. Live at <https://kolbess.github.io/pjteam/> (branch `site-improvements` → `main`).
 Full task files, with acceptance criteria, live in [`tasks/`](tasks/README.md). This file is the short view: what's left and who it waits on.
 
 ## Next task
 
-**Everything that could be done without the studio is done.** The next tasks all need material from you, in this order of value:
+**Both game pages now have real copy** (C03/C04, taken from the itch.io pages). The next tasks all need material from you, in this order of value:
 
-1. **[C03](tasks/C03-write-bearer-game-page.md) + [C07](tasks/C07-add-bearer-screenshots-and-loops.md) — make the Bearer page real.** Send a one-line pitch, 3–5 features, genre, platforms and engine, plus 4–6 screenshots (capture at 1920×1080) and, if you have them, 3–5 clips of 5–10 s. This replaces the `[image 1]` / `[one-line pitch]` placeholders that are live now, removes the page's `noindex` and adds it to the sitemap. The gallery ([C06](tasks/C06-build-game-media-gallery.md)) is already built and switches on the moment media lands.
-2. **[F06](tasks/F06-replace-low-res-kindred-paws-image.md) — Kindred Paws key art.** Its 315×250 menu screenshot is the weakest image on the site now that Bearer has real art.
-3. **[C04](tasks/C04-write-kindred-paws-game-page.md) + [C08](tasks/C08-add-kindred-paws-screenshots-and-loops.md)** — same as 1, for Kindred Paws.
+1. **[C07](tasks/C07-add-bearer-screenshots-and-loops.md) — Bearer screenshots and clips.** 4–6 screenshots captured at 1920×1080 and, if you have them, 3–5 clips of 5–10 s. The five on itch.io are 795–1639 px wide, uneven in shape, and one shows the tutorial text, so they're below the task's bar. The gallery ([C06](tasks/C06-build-game-media-gallery.md)) is already built and its Media section appears the moment media lands.
+2. **[F06](tasks/F06-replace-low-res-kindred-paws-image.md) — Kindred Paws key art.** Its 315×250 menu screenshot is the weakest image on the site. It's also the page's header art, and the share preview still uses the studio card.
+3. **[C08](tasks/C08-add-kindred-paws-screenshots-and-loops.md)** — same as 1, for Kindred Paws (itch.io has only one gameplay shot).
 
 Cheap wins whenever you have a spare minute: a Bluesky handle or Discord invite ([C17](tasks/C17-link-discord-and-community-channels.md)), a yes to streamers recording and monetising your games ([C18](tasks/C18-publish-streamer-video-policy.md)), or buying `pjteam.games` ([C02](tasks/C02-move-site-to-pjteam-games-domain.md)), which also restores the contact email and the hiring card's inbox.
 
@@ -29,18 +29,18 @@ Nothing. Every open task waits on material, a decision or something external —
 | [C15](tasks/C15-add-newsletter-signup.md) | A newsletter provider account (Buttondown/MailerLite) — needs C21 first |
 | [C20](tasks/C20-add-markdown-devlog.md) | A posting cadence you'll keep, plus the first 2–3 posts |
 | [C05](tasks/C05-add-potion-stacker-game-page.md) | Whether to announce Potion Stacker yet, and its pitch/art |
+| [C16](tasks/C16-add-team-photos-and-bios.md) | The home page says "Two curious minds", but Bearer's itch.io credits list ten people. Who should the team section show? |
 
 ## Waiting on assets or copy
 
 | Task | What's needed |
 |---|---|
-| [C03](tasks/C03-write-bearer-game-page.md) / [C04](tasks/C04-write-kindred-paws-game-page.md) | Per game: one-line pitch, 3–5 features, genre, platforms, engine. **Replaces the live placeholder slots and removes their `noindex`** |
 | [C07](tasks/C07-add-bearer-screenshots-and-loops.md) / [C08](tasks/C08-add-kindred-paws-screenshots-and-loops.md) | 4–6 screenshots (1920×1080) and 3–5 clips of 5–10 s per game |
 | [C09](tasks/C09-embed-trailers-with-click-to-load-facade.md) | A YouTube trailer per game |
-| [F06](tasks/F06-replace-low-res-kindred-paws-image.md) | Kindred Paws key art or a 1080p screenshot — its art is still a 315×250 menu shot, the weakest image on the site |
+| [F06](tasks/F06-replace-low-res-kindred-paws-image.md) | Kindred Paws key art or a 1080p gameplay screenshot — its art is still a 315×250 menu shot |
 | [C13](tasks/C13-add-bearer-press-kit.md) / [C14](tasks/C14-add-kindred-paws-press-kit.md) | Per-game press kits — needs C12 plus the media above |
 | [C16](tasks/C16-add-team-photos-and-bios.md) | Team photos (4:5, ≥800×1000) with consent, plus 1–2 sentence bios |
-| [C19](tasks/C19-add-traction-and-social-proof.md) | Demo download numbers, jam results, player quotes (with permission) |
+| [C19](tasks/C19-add-traction-and-social-proof.md) | Download numbers, jam results, player quotes (with permission) |
 | [C22](tasks/C22-add-polish-language-home-page.md) | Polish copy, approved by a native speaker |
 | [C24](tasks/C24-add-work-with-us-page.md) | Open roles and terms — needs the F07 decision |
 | [C26](tasks/C26-add-fan-art-wall.md) | Fan art, with permission |
@@ -55,8 +55,9 @@ Nothing. Every open task waits on material, a decision or something external —
 
 ## Done and live
 
-18 fixes and 2 content tasks: mobile menu, focus styles and skip link, 12px minimum text, reduced motion, real `<footer>` with the current year, social link previews (OG/Twitter), self-hosted fonts, favicon set and manifest, branded 404, sitemap and robots, optimised images, real Bearer art in the hero and card, Instagram link, contact email swapped for itch.io, shared layout modules, and game pages with placeholder slots.
+18 fixes and 4 content tasks: mobile menu, focus styles and skip link, 12px minimum text, reduced motion, real `<footer>` with the current year, social link previews (OG/Twitter), self-hosted fonts, favicon set and manifest, branded 404, sitemap and robots, optimised images, real Bearer art in the hero and card, Instagram link, contact email swapped for itch.io, shared layout modules, the media gallery, and full Bearer and Kindred Paws game pages (indexed and in the sitemap).
 
-Two known compromises, both deliberate:
-- The game pages show `[image 1]` / `[one-line pitch]` placeholders. They carry `noindex` and aren't in the sitemap, but they are reachable from the home cards. C03/C04 fix this.
+Known compromises, all deliberate:
+- The game pages have no Media section until C07/C08 deliver screenshots.
+- Both games are marked "Released", as on itch.io. The home section heading still reads "Worlds in progress".
 - `public/logo.png` (162 KB) still ships but no page uses it; C12 needs it for the press kit.
