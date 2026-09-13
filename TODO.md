@@ -25,7 +25,8 @@ Nothing. Every open task waits on material, a decision or something external —
 | [C18](tasks/C18-publish-streamer-video-policy.md) | Confirm streamers may record and monetise your games; any limits (music cleared?) |
 | [C21](tasks/C21-add-privacy-policy-page.md) | Legal name + postal address of whoever runs PJTeam, and a contact email |
 | [C12](tasks/C12-add-studio-press-kit-page.md) | Factsheet (founded, team size, press contact) + transparent logo exports, light and dark |
-| [C23](tasks/C23-add-faqs-to-game-pages.md) / [C25](tasks/C25-add-public-roadmap-to-game-pages.md) | FAQ answers; roadmap items you're willing to commit to |
+| [C25](tasks/C25-add-public-roadmap-to-game-pages.md) | Roadmap items you're willing to commit to |
+| [C23](tasks/C23-add-faqs-to-game-pages.md) (optional) | The FAQs are live. Confirm Bearer controller support, planned platforms, or whether demo progress carries over to add those answers |
 | [C15](tasks/C15-add-newsletter-signup.md) | A newsletter provider account (Buttondown/MailerLite) — needs C21 first |
 | [C20](tasks/C20-add-markdown-devlog.md) | A posting cadence you'll keep, plus the first 2–3 posts |
 | [C05](tasks/C05-add-potion-stacker-game-page.md) | Whether to announce Potion Stacker yet, and its pitch/art |

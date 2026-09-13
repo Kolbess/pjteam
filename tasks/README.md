@@ -52,7 +52,7 @@ Effort: XS < 30 min · S ≈ 1–2 h · M ≈ half day · L ≈ 1+ day.
 | C20 | [Add a markdown devlog built at build time](C20-add-markdown-devlog.md) | Content | P2 | L | Blocked | C01; F16, C02 (soft) |
 | C21 | [Add a privacy policy page](C21-add-privacy-policy-page.md) | Content | P1 | S | Blocked | C01, F03; F01, F17 (soft) |
 | C22 | [Add a Polish-language version of the home page](C22-add-polish-language-home-page.md) | Content | P3 | M | Blocked | C01, F17 |
-| C23 | [Add FAQs to the game pages](C23-add-faqs-to-game-pages.md) | Content | P3 | S | Blocked | C03, C04 |
+| C23 | [Add FAQs to the game pages](C23-add-faqs-to-game-pages.md) | Content | P3 | S | Done | C03, C04 |
 | C24 | [Add a "Work with us" page](C24-add-work-with-us-page.md) | Content | P3 | S | Blocked | F07, C01; C21 (soft) |
 | C25 | [Add a public roadmap to the game pages](C25-add-public-roadmap-to-game-pages.md) | Content | P3 | S | Blocked | C03, C04 |
 | C26 | [Add a fan-art wall](C26-add-fan-art-wall.md) | Content | P3 | S | Blocked | C06, C01; C17, C21 (soft) |

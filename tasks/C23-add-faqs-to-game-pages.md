@@ -2,9 +2,10 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Content | P3 | S | Blocked |
+| Content | P3 | S | Done |
 
 **Depends on:** C03, C04
+**Done 2026-09-13:** the studio confirmed no release date yet, English only, and keyboard plus Xbox/PlayStation controller support for Kindred Paws. Current platforms come from the itch.io pages. Left out because they aren't confirmed: planned platforms, controller support for Bearer, and whether demo progress carries over.
 **Blocked on:** Answers per game, and only for questions the studio can answer honestly today:
 - Platforms (current and planned)
 - Release timing ("no date yet" is a fine answer)

@@ -48,6 +48,13 @@ export const games = [
       ['Evocative settings', 'You will journey through a variety of poignant locations. These include a ruined shop, abandoned streets, vertical apartment blocks, and a surreal playground.'],
     ],
     facts: { genre: 'Isometric puzzle-adventure', platforms: 'Windows', engine: 'Unity' },
+    // C23: only answers the studio confirmed on 2026-09-13. Controller support and demo saves
+    // aren't confirmed for Bearer, so they're left out.
+    faq: [
+      { q: 'When does Bearer come out?', a: "There's no release date yet. You can play the demo on itch.io now." },
+      { q: 'Which platforms does it run on?', a: 'The demo runs on Windows.' },
+      { q: 'Which languages does it support?', a: 'English.' },
+    ],
     // C07: the five screenshots from the itch.io page, in its order. They're uneven sizes (not
     // 1920x1080 captures), so swap them when proper captures arrive. 640px WebP thumbnails, with
     // the native-size WebP opened in the full-size view.
@@ -143,6 +150,13 @@ export const games = [
       engine: 'Unity',
       madeFor: 'Games for a Cause charity jam',
     },
+    // C23: only answers the studio confirmed on 2026-09-13.
+    faq: [
+      { q: 'When does Kindred Paws come out?', a: "There's no release date yet. You can play the demo on itch.io now." },
+      { q: 'Which platforms does it run on?', a: 'The demo runs in your web browser and on Windows.' },
+      { q: 'Which languages does it support?', a: 'English.' },
+      { q: 'Can I play with a controller?', a: 'Yes. As well as the keyboard, it works with Xbox and PlayStation controllers.' },
+    ],
     // C08: the one gameplay screenshot on the itch.io page, as a lossless WebP at its native
     // 1308x731. Pixel art, so it's rendered pixelated and never recompressed.
     media: [

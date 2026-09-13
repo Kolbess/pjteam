@@ -13,7 +13,7 @@ const slug = document.body.dataset.game;
 const game = getGame(slug);
 if (!game) throw new Error(`Unknown game slug: ${slug}`);
 
-const { about = [], features = [], facts = {}, jamResults = [] } = game;
+const { about = [], features = [], facts = {}, jamResults = [], faq = [] } = game;
 
 // C19: jam placements, each linked to its public results page.
 const renderJam = ({ jam, url, entries, ratings, ranks }) => `<div class="jam-result">
@@ -75,6 +75,15 @@ const sections = [
         </dl>`,
   ),
   jamResults.length && section('recognition', 'Recognition', jamResults.map(renderJam).join('\n        ')),
+  // C23: native <details>, so the FAQ opens with Enter/Space and works without JavaScript.
+  faq.length &&
+    section(
+      'faq',
+      'FAQ',
+      `<div class="game-faq">
+          ${faq.map(({ q, a }) => `<details><summary>${q}</summary><p>${a}</p></details>`).join('\n          ')}
+        </div>`,
+    ),
 ].filter(Boolean);
 
 document.querySelector('#app').innerHTML = `

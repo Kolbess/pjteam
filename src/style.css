@@ -144,6 +144,14 @@ h1 em { color: var(--blue-dark); font-style: normal; }
 .game-facts { display: grid; gap: 18px 40px; grid-template-columns: repeat(2, minmax(0, 240px)); margin: 0; }
 .game-facts dt { color: var(--muted); font-family: 'DM Mono', monospace; font-size: .75rem; letter-spacing: .05em; text-transform: uppercase; }
 .game-facts dd { font-size: 15px; font-weight: 700; margin: 6px 0 0; }
+.game-faq { border-top: 1px solid var(--line); max-width: 640px; }
+.game-faq details { border-bottom: 1px solid var(--line); }
+.game-faq summary { align-items: center; cursor: pointer; display: flex; font-size: 16px; font-weight: 700; gap: 16px; justify-content: space-between; list-style: none; min-height: 48px; padding: 14px 0; transition: color .2s ease; }
+.game-faq summary::-webkit-details-marker { display: none; }
+.game-faq summary::after { color: var(--blue-dark); content: '+'; flex: none; font-family: 'DM Mono', monospace; font-size: 1.125rem; font-weight: 400; line-height: 1; }
+.game-faq details[open] summary::after { content: '−'; }
+.game-faq summary:hover { color: var(--blue-dark); }
+.game-faq p { color: var(--muted); font-size: 15px; line-height: 1.7; margin: 0; padding: 0 32px 18px 0; }
 .jam-result + .jam-result { margin-top: 36px; }
 .jam-ranks { display: flex; flex-wrap: wrap; gap: 16px 48px; list-style: none; margin: 0 0 18px; padding: 0; }
 .jam-ranks li { display: grid; gap: 6px; }
