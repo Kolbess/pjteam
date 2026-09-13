@@ -2,9 +2,10 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Content | P1 | S | Blocked |
+| Content | P1 | S | In progress (1 itch.io screenshot) |
 
 **Depends on:** C06, C04
+**Progress 2026-09-13, as agreed with the studio:** the gallery shows the one gameplay screenshot from the itch.io page, a lossless WebP at its native 1308×731 (45 KB), rendered pixelated. Still needed: 3–5 more gameplay screenshots at integer scale, ideally without the title logo, and 3–5 clips.
 **Blocked on:** Kindred Paws media captured by the studio, with the display order chosen:
 - 4–6 gameplay screenshots (not menus). Native resolution, or integer-scaled if pixel art.
 - 3–5 gameplay clips, 5–10 s each

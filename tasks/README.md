@@ -37,7 +37,7 @@ Effort: XS < 30 min · S ≈ 1–2 h · M ≈ half day · L ≈ 1+ day.
 | C05 | [Add the Potion Stacker game page](C05-add-potion-stacker-game-page.md) | Content | P3 | S | Blocked | C01, C15 (soft) |
 | C06 | [Build a lightweight media gallery for game pages](C06-build-game-media-gallery.md) | Content | P1 | M | Done | C01, F10, F12 |
 | C07 | [Add Bearer screenshots and gameplay loops](C07-add-bearer-screenshots-and-loops.md) | Content | P1 | S | Done (itch.io screenshots, no clips) | C06, C03 |
-| C08 | [Add Kindred Paws screenshots and gameplay loops](C08-add-kindred-paws-screenshots-and-loops.md) | Content | P1 | S | Blocked | C06, C04 |
+| C08 | [Add Kindred Paws screenshots and gameplay loops](C08-add-kindred-paws-screenshots-and-loops.md) | Content | P1 | S | In progress (1 itch.io screenshot) | C06, C04 |
 | C09 | [Embed game trailers with a click-to-load YouTube facade](C09-embed-trailers-with-click-to-load-facade.md) | Content | P1 | S | Blocked | C01; C03, C04 (soft) |
 | C10 | [Add the itch.io widget to game pages](C10-add-itch-io-widget-to-game-pages.md) | Content | P1 | S | Done (lazy-loaded, desktop only; list itch.io in C21) | C03, C04; C21 (soft) |
 | C11 | [Add Steam wishlist widgets](C11-add-steam-wishlist-widgets.md) | Content | P3 | XS | Blocked | C10; C21 (soft) |

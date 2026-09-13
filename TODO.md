@@ -9,7 +9,7 @@ Full task files, with acceptance criteria, live in [`tasks/`](tasks/README.md). 
 
 1. **[C07](tasks/C07-add-bearer-screenshots-and-loops.md) — better Bearer screenshots, plus clips.** The gallery is live with the five itch.io screenshots, but they're 795–1639 px wide, uneven in shape, and one shows the tutorial text. 4–6 captures at 1920×1080 and 3–5 clips of 5–10 s would replace them.
 2. **[F06](tasks/F06-replace-low-res-kindred-paws-image.md) — Kindred Paws key art.** Its 315×250 menu screenshot is the weakest image on the site. It's also the page's header art, and the share preview still uses the studio card.
-3. **[C08](tasks/C08-add-kindred-paws-screenshots-and-loops.md)** — same as 1, for Kindred Paws (itch.io has only one gameplay shot).
+3. **[C08](tasks/C08-add-kindred-paws-screenshots-and-loops.md) — more Kindred Paws screenshots, plus clips.** Its gallery shows the only gameplay shot on itch.io. 3–5 more at integer scale, and 3–5 clips, would fill it out.
 
 Cheap wins whenever you have a spare minute: a Bluesky handle or Discord invite ([C17](tasks/C17-link-discord-and-community-channels.md)), a yes to streamers recording and monetising your games ([C18](tasks/C18-publish-streamer-video-policy.md)), or buying `pjteam.games` ([C02](tasks/C02-move-site-to-pjteam-games-domain.md)), which also restores the contact email and the hiring card's inbox.
 
@@ -57,5 +57,5 @@ Nothing. Every open task waits on material, a decision or something external —
 18 fixes and 4 content tasks: mobile menu, focus styles and skip link, 12px minimum text, reduced motion, real `<footer>` with the current year, social link previews (OG/Twitter), self-hosted fonts, favicon set and manifest, branded 404, sitemap and robots, optimised images, real Bearer art in the hero and card, Instagram link, contact email swapped for itch.io, shared layout modules, the media gallery, and full Bearer and Kindred Paws game pages (indexed and in the sitemap).
 
 Known compromises, all deliberate:
-- Bearer's gallery uses the itch.io screenshots, uneven sizes and all, until proper captures arrive. Kindred Paws has no Media section yet.
+- Both galleries use the itch.io screenshots until proper captures arrive: Bearer's five are uneven sizes, and Kindred Paws has just one.
 - `public/logo.png` (162 KB) still ships but no page uses it; C12 needs it for the press kit.

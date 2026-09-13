@@ -143,6 +143,18 @@ export const games = [
       engine: 'Unity',
       madeFor: 'Games for a Cause charity jam',
     },
+    // C08: the one gameplay screenshot on the itch.io page, as a lossless WebP at its native
+    // 1308x731. Pixel art, so it's rendered pixelated and never recompressed.
+    media: [
+      {
+        type: 'image',
+        src: `${gamesUrl}kindred-paws/screenshot-1.webp`,
+        alt: 'The owl glides past a floating cloud platform with cherries, above a grassy ledge, with the Kindred Paws title in the sky.',
+        width: 1308,
+        height: 731,
+        pixelArt: true,
+      },
+    ],
     // Public jam results (C19). Fixed once the jam closed, so they need no "as of" date.
     jamResults: [
       {
