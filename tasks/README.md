@@ -35,8 +35,8 @@ Effort: XS < 30 min · S ≈ 1–2 h · M ≈ half day · L ≈ 1+ day.
 | C03 | [Fill in the Bearer game page](C03-write-bearer-game-page.md) | Content | P1 | S | Done (copy from itch.io) | C01 |
 | C04 | [Fill in the Kindred Paws game page](C04-write-kindred-paws-game-page.md) | Content | P1 | S | Done (copy from itch.io; share image waits on F06) | C01, F06 (soft) |
 | C05 | [Add the Potion Stacker game page](C05-add-potion-stacker-game-page.md) | Content | P3 | S | Blocked | C01, C15 (soft) |
-| C06 | [Build a lightweight media gallery for game pages](C06-build-game-media-gallery.md) | Content | P1 | M | Done (inactive until C07/C08 supply media) | C01, F10, F12 |
-| C07 | [Add Bearer screenshots and gameplay loops](C07-add-bearer-screenshots-and-loops.md) | Content | P1 | S | Blocked | C06, C03 |
+| C06 | [Build a lightweight media gallery for game pages](C06-build-game-media-gallery.md) | Content | P1 | M | Done | C01, F10, F12 |
+| C07 | [Add Bearer screenshots and gameplay loops](C07-add-bearer-screenshots-and-loops.md) | Content | P1 | S | Done (itch.io screenshots, no clips) | C06, C03 |
 | C08 | [Add Kindred Paws screenshots and gameplay loops](C08-add-kindred-paws-screenshots-and-loops.md) | Content | P1 | S | Blocked | C06, C04 |
 | C09 | [Embed game trailers with a click-to-load YouTube facade](C09-embed-trailers-with-click-to-load-facade.md) | Content | P1 | S | Blocked | C01; C03, C04 (soft) |
 | C10 | [Add the itch.io widget to game pages](C10-add-itch-io-widget-to-game-pages.md) | Content | P1 | S | Done (lazy-loaded, desktop only; list itch.io in C21) | C03, C04; C21 (soft) |

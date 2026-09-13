@@ -2,9 +2,10 @@
 
 | Type | Priority | Effort | Status |
 |---|---|---|---|
-| Content | P1 | S | Blocked |
+| Content | P1 | S | Done (itch.io screenshots, no clips) |
 
 **Depends on:** C06, C03
+**Done 2026-09-13, as agreed with the studio:** the gallery uses the five screenshots from the itch.io page, in its order, as 640px WebP thumbnails with native-size WebP full views (all under 40 KB). They fall short of the brief: uneven sizes (795–1639px wide, not 1920×1080), and one shows the tutorial text. There are no clips. Swap in proper captures and add clips when the studio has them.
 **Blocked on:** Bearer media captured by the studio, with the display order chosen:
 - 4–6 screenshots, 1920×1080 PNG, with no debug/UI overlays and no text banners
 - 3–5 gameplay clips, 5–10 s each, 1080p source, sound not needed

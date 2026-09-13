@@ -22,8 +22,7 @@ const heroSrcset = (ext) => bearerWidths.map((w) => `${gamesUrl}bearer-hero-${w}
 // public/games/<slug>/:
 //   { type: 'image', src, sources?, full?, alt, width, height }
 //   { type: 'video', src, webm?, poster, alt, width, height }
-// No game has one yet - C07/C08 deliver the screenshots and clips - so the game pages leave
-// out their Media section.
+// A game without one leaves out its Media section.
 export const games = [
   {
     slug: 'bearer',
@@ -49,6 +48,51 @@ export const games = [
       ['Evocative settings', 'You will journey through a variety of poignant locations. These include a ruined shop, abandoned streets, vertical apartment blocks, and a surreal playground.'],
     ],
     facts: { genre: 'Isometric puzzle-adventure', platforms: 'Windows', engine: 'Unity' },
+    // C07: the five screenshots from the itch.io page, in its order. They're uneven sizes (not
+    // 1920x1080 captures), so swap them when proper captures arrive. 640px WebP thumbnails, with
+    // the native-size WebP opened in the full-size view.
+    media: [
+      {
+        type: 'image',
+        src: `${gamesUrl}bearer/screenshot-1-640.webp`,
+        full: `${gamesUrl}bearer/screenshot-1.webp`,
+        alt: 'The bear stands in a pool of blue light in a dusty shop, with glowing outlines marking things it can use.',
+        width: 640,
+        height: 519,
+      },
+      {
+        type: 'image',
+        src: `${gamesUrl}bearer/screenshot-2-640.webp`,
+        full: `${gamesUrl}bearer/screenshot-2.webp`,
+        alt: 'The tutorial room: a checkered floor with cardboard boxes and "Press WASD to walk" written on the tiles.',
+        width: 640,
+        height: 383,
+      },
+      {
+        type: 'image',
+        src: `${gamesUrl}bearer/screenshot-3-640.webp`,
+        full: `${gamesUrl}bearer/screenshot-3.webp`,
+        alt: 'The bear stands beside a parked van, next to a glowing orange barrier of hexagons.',
+        width: 640,
+        height: 336,
+      },
+      {
+        type: 'image',
+        src: `${gamesUrl}bearer/screenshot-4-640.webp`,
+        full: `${gamesUrl}bearer/screenshot-4.webp`,
+        alt: 'The bear next to a tall display case on a checkered shop floor, with a metal crate on a pallet nearby.',
+        width: 640,
+        height: 338,
+      },
+      {
+        type: 'image',
+        src: `${gamesUrl}bearer/screenshot-5-640.webp`,
+        full: `${gamesUrl}bearer/screenshot-5.webp`,
+        alt: 'A glowing blue orb of light on the floor of an abandoned shop, with crates and a toy truck behind it.',
+        width: 640,
+        height: 352,
+      },
+    ],
     cover: {
       sources: [
         { type: 'image/avif', srcset: bearerSrcset('avif'), sizes: bearerSizes },
